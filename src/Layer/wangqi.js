@@ -32,13 +32,13 @@
             var str = "";
             for(var a = 0;a<GC.PC.length;a++){
                 if(GC.PC[a].Type=='big'&& GC.PC[a].readid==PCreadid['big']){
-                    str+=GC.PC[a].txt +'| ';
+                    str+=GC.PC[a].txt +' | ';
                 }
                 if(GC.PC[a].Type=='style'&& GC.PC[a].readid==PCreadid['style']){
-                    str+=GC.PC[a].txt +'| ';
+                    str+=GC.PC[a].txt +' | ';
                 }
                 if(GC.PC[a].Type=='num'&& GC.PC[a].readid==PCreadid['num']){
-                    str+=GC.PC[a].txt +'| ';
+                    str+=GC.PC[a].txt +' | ';
                 }
             }
             return str;

@@ -16,7 +16,7 @@ var GC = {
      * flaxres:flax中的对应资源名称
      * readid:对应的readid向后台交互的数据
      * res:res中的图片资源名称
-     * txt:对应的显示文本
+     * txt:对应的显示文本♠♥♦♣
      */
     PC:[
         {'id':'1','Type':'num','flaxres':'A','readid':'A','res':null,'txt':'A'},
@@ -32,10 +32,10 @@ var GC = {
         {'id':'11','Type':'num','flaxres':'J','readid':'J','res':null,'txt':'J'},
         {'id':'12','Type':'num','flaxres':'Q','readid':'Q','res':null,'txt':'Q'},
         {'id':'13','Type':'num','flaxres':'K','readid':'K','res':null,'txt':'K'},
-        {'id':'14','Type':'style','flaxres':'r','readid':'2','res':'hong','txt':'红'},
-        {'id':'15','Type':'style','flaxres':'sds','readid':'1','res':'hei','txt':'黑'},
-        {'id':'16','Type':'style','flaxres':'pb','readid':'3','res':'hua','txt':'花'},
-        {'id':'17','Type':'style','flaxres':'sq','readid':'4','res':'kuai','txt':'块'},
+        {'id':'14','Type':'style','flaxres':'r','readid':'2','res':'hong','txt':'♥'},
+        {'id':'15','Type':'style','flaxres':'sds','readid':'1','res':'hei','txt':'♠'},
+        {'id':'16','Type':'style','flaxres':'pb','readid':'3','res':'hua','txt':'♣'},
+        {'id':'17','Type':'style','flaxres':'sq','readid':'4','res':'kuai','txt':'♦'},
         {'id':'18','Type':'big','flaxres':'max','readid':'3','res':null,'txt':'大'},
         {'id':'19','Type':'big','flaxres':'min','readid':'1','res':null,'txt':'小'},
         {'id':'20','Type':'big','flaxres':'7','readid':'2','res':null,'txt':'中'}
