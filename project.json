@@ -81,6 +81,7 @@
     "src/Layer/guize.js",
     "src/Layer/tip_NB.js",
     "src/Layer/wangqi.js",
+    "src/Layer/touzhujilu.js",
     "src/Layer/caidanBtn.js",
     "src/Layer/shezhi.js",
     "src/Layer/gulijindaozhang.js",

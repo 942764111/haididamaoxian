@@ -25,21 +25,10 @@ var GameBeginScene = cc.Scene.extend({
             parent: this,
             x: cc.winSize.width/2,
             y: cc.winSize.height/2});
-       // //this.Layer['img'].setScaleX(cc.winSize.width/this.Layer['img'].getContentSize().width);
-       //// this.Layer['userimg'].x = 60;
-       // this.Layer['btn_fh'].x =cc.winSize.width-this.Layer['btn_fh'].getContentSize().width
-       // this.Layer['btn_th'].x =cc.winSize.width-this.Layer['btn_fh'].getContentSize().width
-       // this.Layer['btn_mrfl'].x =cc.winSize.width-this.Layer['btn_fh'].getContentSize().width
 
             this.Layer['adimn'].fps = 2;
           //  this.Layer['adimn'].autoStopWhenOver = true;
            // this.Layer['adimn'].play(false);
-
-
-        //X.DataMger.Getinstance({
-        //    'attributes':{'img_userimg':res.userimg},
-        //    'node':me.Layer
-        //});
 
 
         //菜单
@@ -57,8 +46,6 @@ var GameBeginScene = cc.Scene.extend({
         }
 
         GetHTTPSData();
-
-
         function initBtns(){
             //判断
             if(GC.USER_DATA.DATA['issign'] && GC.USER_DATA.DATA['encourage']){
@@ -171,9 +158,11 @@ var GameBeginScene = cc.Scene.extend({
             case 'btn_bean'://充值豆子
              this.addChild(new chongzhi(),GC.GAME_ZORDER.on);
             //    X.Gotopup();
+
                 break;
             case 'btn_fh'://返回按钮
                // X.closeWebPage();
+                X.touzhujilu.Getinstance().show();
                 break;
             case 'btn_th'://脱换
                 self.location='http://gid=117';
@@ -231,6 +220,9 @@ var GameBeginScene = cc.Scene.extend({
                 cc.audioEngine.resumeMusic();
                 me.Layer['caidanrq']['yxsx_btn'].setVisible(true);
                 break;
+            case 'tzjl_btn':
+                X.touzhujilu.Getinstance().show();
+                break;
         }
     },
     // btns实现方法
@@ -254,5 +246,6 @@ var GameBeginScene = cc.Scene.extend({
         return parseInt(me.Layer['userbean'].getString());
     },
     onExit:function() {
+
     }
 });

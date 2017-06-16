@@ -17,31 +17,38 @@
     additem : function(Data){
         var list = ccui.helper.seekWidgetByName(this.json,"ListView");
         list.removeAllItems();
-        var arrobj = Data;
+        var arrobj = Data,numtxt,styletxt,bigtxt;
         for(var i=0;i<arrobj.length;i++){
             var item = ccs.load(res.wangqiitem).node;
             var qishu = ccui.helper.seekWidgetByName(item,"qishu");
-            var jieguo = ccui.helper.seekWidgetByName(item,"jieguo");
-            var str = "";
-            str = Iteminfo(arrobj[i]);
-            qishu.setString(arrobj[i]['issue']);
-            jieguo.setString(str);
+            numtxt = ccui.helper.seekWidgetByName(item,"numtxt");
+            styletxt = ccui.helper.seekWidgetByName(item,"styletxt");
+            bigtxt = ccui.helper.seekWidgetByName(item,"bigtxt");
+            Iteminfo(arrobj[i]);
+            qishu.setString(X.stringFormat(LNG.ISSUE,arrobj[i]['issue']));
+            qishu.setColor(cc.color(GC.COLOROBJ.Lightpurple));
             list.pushBackCustomItem(item);
         }
         function Iteminfo(PCreadid){
-            var str = "";
             for(var a = 0;a<GC.PC.length;a++){
                 if(GC.PC[a].Type=='big'&& GC.PC[a].readid==PCreadid['big']){
-                    str+=GC.PC[a].txt +' | ';
+                    numtxt.setString(GC.PC[a].txt);
+                    numtxt.setColor(cc.color(GC.COLOROBJ.Lightpurple));
                 }
                 if(GC.PC[a].Type=='style'&& GC.PC[a].readid==PCreadid['style']){
-                    str+=GC.PC[a].txt +' | ';
+                    if(GC.PC[a].txt=='♥'||GC.PC[a].txt=='♦'){
+                        styletxt.setColor(cc.color(GC.COLOR[5]));//红色
+                    }else{
+                        styletxt.setColor(cc.color(GC.COLOR[4]));//黑色
+                    }
+
+                    styletxt.setString(GC.PC[a].txt);
                 }
                 if(GC.PC[a].Type=='num'&& GC.PC[a].readid==PCreadid['num']){
-                    str+=GC.PC[a].txt +' | ';
+                    bigtxt.setString(GC.PC[a].txt);
+                    bigtxt.setColor(cc.color(GC.COLOROBJ.Lightpurple));
                 }
             }
-            return str;
         }
 
     },

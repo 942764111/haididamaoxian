@@ -8,8 +8,14 @@ var GC = {
         '#33FF99',
         '#d6d6d6',
         '#fff583',
-        '#ece3ff'
+        '#ece3ff',
+        '#151515',//黑
+        '#FF0000'//红
     ],
+    COLOROBJ : {
+        'Deeppurple':'#c3a8ff',//文字通用深紫
+        'Lightpurple':'#ece3ff'//文字通用白紫
+    },
     /**
      * PC : 扑克牌配置
      * Type:类型与后台同步
@@ -63,9 +69,9 @@ var GC = {
     },
 
     //场景中的按钮Key
-    GAME_BEGIN_BTNS:['btn_bean','btn_fh','btn_th','btn_mrfl','btn_xsc','btn_jjc','btn_gsc','btn_sz','img'],
+    GAME_BEGIN_BTNS:['btn_bean','btn_fh','btn_th','btn_mrfl','btn_xsc','btn_jjc','btn_gsc','btn_sz','img','tzjl_btn'],
     GAME_MOVE_BTNS:['btn_fallback','btn_fanhui','btn_caidan','btn_add','btn_wangqi','img'],
-    GAME_MOVE_CDBTNS:['yxwf_btn','yxsx_btn','yxsx_btn2',],
+    GAME_MOVE_CDBTNS:['yxwf_btn','yxsx_btn','yxsx_btn2','tzjl_btn'],
     //提示框layer按钮
     GAME_PROMPTBOX:['btn_remove','btn_qr'],
 
@@ -183,6 +189,8 @@ GC.HTTPDATA={
     'exchange':'http://api.qlbuy.cc/h5/poker/exchange',
     'encourage':'http://api.qlbuy.cc/h5/poker/encourage',//鼓励金
     'remaintime':'http://api.qlbuy.cc/h5/poker/remaintime',//开奖时间间隔信息
+    'pokerlog':'http://api.qlbuy.cc/h5/poker/log',//投注记录
+    'pokerlogtail':'http://api.qlbuy.cc/h5/poker/logtail',//投注记录详情
     'qulebuybacktopay':'http://api.qlbuy.cc/h5/poker/qulebuybacktopay',//返回APP界面
     'qulebuypay':'http://api.qlbuy.cc/h5/poker/static/qulebuypay',//返回充值界面
     //状态码:

@@ -38,7 +38,11 @@ var res = {
     gljdz:'res/gljdz.json',
     loginimg:'res/loginimg.png',
     yzimguser:'res/GameMove/IMG/yzimguser.png',
-    yzimgai:'res/GameMove/IMG/yzimgai.png'
+    yzimgai:'res/GameMove/IMG/yzimgai.png',
+    tzjl:'res/touzhujilu.json',
+    tzjlitem:'res/touzhujiluitem.json',
+    tznr:'res/touzhuneirong.json',
+    touzhuneirong:'res/touzhuneirong.json'
 };
 var res_gaoshouc = {
     img:'res/gaoshouc/img.png',
@@ -125,6 +129,10 @@ var res_PC = {
 }
 
 var res_GameBegin = [
+    res.touzhuneirong,
+    res.tznr,
+    res.tzjl,
+    res.tzjlitem,
     res.GameBeginimg_png,
     res.yzimguser,
     res.yzimgai,

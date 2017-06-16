@@ -26,23 +26,53 @@
         },
         runGame : function() {
             var me = this.me;
-
+            var sizeindex = 1;
             var time = setInterval(function(){
                 if(me.isGameOver){
                     clearTimeout(time);
                 }
                 rouletteMethod();
-            },1000);
+            },500);
             this.TimeEvents.push(time);
             function rouletteMethod(){
+                sizeindex++;
                 var rscore = parseInt(GC.YZ_ID['score'][Math.floor(Math.random()*3)]);
-                var rbtn = [];
+                var allbtn = [];
+                var num = [];
+                var style = [];
+                var big = [];
                 for(var i=0;i<GC.PC.length-1;i++){
-                    rbtn.push(GC.PC[i].flaxres);
+                    allbtn.push(GC.PC[i].flaxres);
+                    if(GC.PC[i].Type=='num'){
+                        num.push(i);
+                    }
+                    if(GC.PC[i].Type=='style'){
+                        style.push(i);
+                    }
+                    if(GC.PC[i].Type=='big'){
+                        big.push(i);
+                    }
                 }
-                var rbtnobj;
-                var randrbtnnum = Math.floor(Math.random()*rbtn.length);
-                rbtnobj = rbtn[randrbtnnum];
+                var rbtnobj,randrbtnnum;
+
+                if(sizeindex%2==0){
+                    randrbtnnum = big[Math.floor(Math.random()*big.length)];
+                  //  cc.log('sizeindex:'+sizeindex+','+'big');
+                }
+                else if(sizeindex%5==0){
+                    randrbtnnum = num[Math.floor(Math.random()*num.length)];
+                //    cc.log('sizeindex:'+sizeindex+','+'num');
+                }
+                else if(sizeindex%3==0||sizeindex%7==0){
+                    randrbtnnum = style[Math.floor(Math.random()*style.length)];
+                  //  cc.log('sizeindex:'+sizeindex+','+'style');
+
+                }else{
+                    randrbtnnum = big[Math.floor(Math.random()*big.length)];
+                  //  cc.log('sizeindex:'+sizeindex+','+'big');
+                }
+            //    cc.log('sizeindex:'+randrbtnnum+','+'num');
+                rbtnobj = allbtn[randrbtnnum];
                 var readai = Math.floor(Math.random()*GC.AI_COUNT+1);
                 me.btn_rouletteMethods({
                     yzscore:rscore,

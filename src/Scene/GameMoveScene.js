@@ -105,6 +105,16 @@ var GameMoveScene = cc.Scene.extend({
 
        // this.MoveLayer['img'].setScaleX(cc.winSize.width/this.MoveLayer['img'].getContentSize().width);
         var Roulette = this.Layer['rouletteIndex'];
+
+        X.DataMger.Getinstance({
+            'attributes': {
+                'bigtxt': '',
+                'styletxt': '',
+                'numtxt': '',
+            },
+            'node': me.Layer
+        });
+
         initUserData();
         ////初始化界面按钮
         //function initBtns(){
@@ -332,6 +342,9 @@ var GameMoveScene = cc.Scene.extend({
             case 'btn_'+this.YZ_SCORE[2]:
                 me.btn_yzMethods(this.YZ_SCORE[2],me,obj);
                 break;
+            case 'tzjl_btn':
+                X.touzhujilu.Getinstance().show();
+                break;
             default :
                 break;
         }
@@ -439,7 +452,6 @@ var GameMoveScene = cc.Scene.extend({
                             me.refreshUserData({
                                 points:tempdata['usermoney']
                             });
-
                             setScore();
                         }else if(returndata.code == GC.HTTPDATA.STAY_LOTTERY){
                             X.tip_NB.show(LNG.KJZ);
@@ -450,6 +462,7 @@ var GameMoveScene = cc.Scene.extend({
                                 me.GameState('GameStart');
                             });
                         }else if(returndata.code == GC.HTTPDATA.MONEY_DONT){
+                            obj['btnon'] = true;
                             X.tip_NB.show(LNG.YEBZ,obj);
                         }else if(returndata.code == GC.HTTPDATA.GLJDZ){
                             var tempdata = returndata.data;
@@ -674,6 +687,9 @@ var GameMoveScene = cc.Scene.extend({
 
                         barindex = GC.USER_DATA.DATA['remain_buy_seconds'];
                         var seconds = GC.USER_DATA.DATA['remain_seconds'];
+
+                        refreshOnRecord();
+
                         X.DataMger.Getinstance({
                             'attributes': {'EnergyBartxt': barindex || 0},
                             'node': me.Layer
@@ -694,26 +710,7 @@ var GameMoveScene = cc.Scene.extend({
                                     me.isrefreshDATA = false;
                                     me.setRouletteEnabled(true);
                                     me.getAINode().runGame();
-                                    var userPParr = {}, PCobj = null;
-                                    for (var i = 0; i < GC.PC.length; i++) {
 
-                                        PCobj = GC.PC[i];
-
-                                        for (var j = 0; j < GC.LPTYPE.length; j++) {
-                                            if (PCobj.Type == GC.LPTYPE[j] && PCobj.readid == GC.USER_DATA.DATA['oldlotterys'][0][GC.LPTYPE[j]] && PCobj.txt) {
-                                                userPParr[GC.LPTYPE[j]] = PCobj.txt;
-                                            }
-                                        }
-                                    }
-
-                                    X.DataMger.Getinstance({
-                                        'attributes': {
-                                            'bigtxt': userPParr['big'],
-                                            'styletxt': userPParr['style'],
-                                            'numtxt': userPParr['num'],
-                                        },
-                                        'node': me.Layer
-                                    });
                                 }
                                 if (barindex == 2) {//等待开奖中
                                     me.islock = true;
@@ -759,6 +756,34 @@ var GameMoveScene = cc.Scene.extend({
                 }
 
             });
+            //刷新上一期记录
+            function refreshOnRecord(){
+                var userPParr = {}, PCobj = null;
+                for (var i = 0; i < GC.PC.length; i++) {
+
+                    PCobj = GC.PC[i];
+
+                    for (var j = 0; j < GC.LPTYPE.length; j++) {
+                        if (PCobj.Type == GC.LPTYPE[j] && PCobj.readid == GC.USER_DATA.DATA['oldlotterys'][0][GC.LPTYPE[j]] && PCobj.txt) {
+                            userPParr[GC.LPTYPE[j]] = PCobj.txt;
+                        }
+                    }
+                }
+
+                if(userPParr['style']=='♥'||userPParr['style']=='♦'){
+                    me.Layer['styletxt'].setColor(cc.color(GC.COLOR[5]));//红色
+                }else{
+                    me.Layer['styletxt'].setColor(cc.color(GC.COLOR[4]));//黑色
+                }
+                X.DataMger.Getinstance({
+                    'attributes': {
+                        'bigtxt': userPParr['big'],
+                        'styletxt': userPParr['style'],
+                        'numtxt': userPParr['num'],
+                    },
+                    'node': me.Layer
+                });
+            }
         }
     },
     //-----------------------Over
@@ -906,7 +931,7 @@ var GameMoveScene = cc.Scene.extend({
             me.Layer[GC.GAME_MOVE_BTNS[2]]['caidanbtn'].removeFromParent();
         }
         X.releaseAllTime();
-
+        GC.HTTPDATA.boltagainindex = 1;
         if(this.WinSize){
             delete this.WinSize;
             this.WinSize = null;
