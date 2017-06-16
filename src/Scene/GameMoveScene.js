@@ -66,7 +66,7 @@ var GameMoveScene = cc.Scene.extend({
                         return;
                     }
 
-                    //GC.USER_DATA.DATA['points']>=100&&
+
                     if(GC.USER_DATA.DATA['points']<500&&GC.YZ_ID['id']=='XS_SCORE'){
                       X.Promptbox.Getinstance({
                             btnsType:5,
@@ -469,7 +469,12 @@ var GameMoveScene = cc.Scene.extend({
                             me.refreshUserData({
                                 points:tempdata['usermoney']
                             });
-                            GC.SCENE['node'].addChild(new gulijindaozhang(),GC.GAME_ZORDER.on);
+
+                            X.activity.Getinstance({
+                                titleimg:2,
+                                txt: X.stringFormat(LNG.QLGDZ,50)
+                            });
+
                         }else{
                             X.tip_NB.show(LNG.WLCW,obj);
                             //X.Promptbox.Getinstance({
@@ -932,6 +937,14 @@ var GameMoveScene = cc.Scene.extend({
         }
         X.releaseAllTime();
         GC.HTTPDATA.boltagainindex = 1;
+
+        GC.SCENE['node'].removeAllChildren();
+        for(var obj in X){
+            if(X[obj]._instance){
+                X[obj]._instance = null;
+            }
+        }
+
         if(this.WinSize){
             delete this.WinSize;
             this.WinSize = null;

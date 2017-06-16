@@ -347,6 +347,7 @@
                 <file name="src/Layer/caidanBtn.js"/>
                 <file name="src/Layer/shezhi.js"/>
                 <file name="src/Layer/gulijindaozhang.js"/>
+                <file name="src/Layer/promptBox/activity.js"/>
                 <file name="src/Layer/Node/ActionNodes.js"/>
                 <file name="src/Layer/Node/AINodes.js"/>
                 <file name="src/Layer/Node/GMoveUserNode.js"/>

@@ -46,6 +46,7 @@ var GameBeginScene = cc.Scene.extend({
         }
 
         GetHTTPSData();
+        initBtns();
         function initBtns(){
             //判断
             if(GC.USER_DATA.DATA['issign'] && GC.USER_DATA.DATA['encourage']){
@@ -92,6 +93,7 @@ var GameBeginScene = cc.Scene.extend({
                         initBtns();
 
                         if(!GC.USER_DATA.DATA['issign']){
+                            GC.IS_SIGN = 1;
                             var spritePos = me.Layer['btn_mrfl'].parent.convertToWorldSpace(me.Layer['btn_mrfl'].getPosition());
                             var namepos = me.Layer['btn_bean'].parent.convertToWorldSpace(me.Layer['btn_bean'].getPosition());
                             var spriteFrame = cc.spriteFrameCache.getSpriteFrame("dou.png");
@@ -112,6 +114,11 @@ var GameBeginScene = cc.Scene.extend({
                                 ));
                                 me.addChild(sprite,20);
                             }
+
+                            X.activity.Getinstance({
+                                titleimg:1,
+                                txt: X.stringFormat(LNG.QLGDZ,80)
+                            });
                         }
 
                     }else if(returndata.code == GC.HTTPDATA.FAILURE){
@@ -162,7 +169,7 @@ var GameBeginScene = cc.Scene.extend({
                 break;
             case 'btn_fh'://返回按钮
                // X.closeWebPage();
-                X.touzhujilu.Getinstance().show();
+
                 break;
             case 'btn_th'://脱换
                 self.location='http://gid=117';
@@ -246,6 +253,11 @@ var GameBeginScene = cc.Scene.extend({
         return parseInt(me.Layer['userbean'].getString());
     },
     onExit:function() {
-
+        GC.SCENE['node'].removeAllChildren();
+        for(var obj in X){
+            if(X[obj]._instance){
+                X[obj]._instance = null;
+            }
+        }
     }
 });

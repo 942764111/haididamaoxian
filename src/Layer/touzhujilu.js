@@ -281,10 +281,17 @@
     X.touzhujilu= {
         _instance: null
         ,Getinstance: function(){
+          //  this.remove();
             if(!this._instance){
                 this._instance = new _touzhujilu();
             }
             return this._instance;
+        }
+        ,remove : function(){
+            if(this._instance){
+                this._instance.removeFromParent();
+                this._instance = null;
+            }
         }
     };
 

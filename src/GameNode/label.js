@@ -32,7 +32,7 @@ var LNG={
     ZDXE:'该区域投注限额{1}',
     WLCW:'网络错误',
     SXSJ:'数据刷新',
-    QLGDZ:'X{1}趣乐豆',
+    QLGDZ:'X {1}',
     TSRC:'运气不错去{1}场试试',
     ISSUE:'{1}期',
     TZJE:'投注{1}',

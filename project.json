@@ -85,6 +85,7 @@
     "src/Layer/caidanBtn.js",
     "src/Layer/shezhi.js",
     "src/Layer/gulijindaozhang.js",
+    "src/Layer/promptBox/activity.js",
 
     "src/Layer/Node/ActionNodes.js",
     "src/Layer/Node/AINodes.js",

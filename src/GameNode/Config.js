@@ -83,6 +83,11 @@ var GC = {
         '4':'sxbtn',//刷新
         '5':'qssbtn'//去试试
     },
+    //提示框标题配置
+    PROMPTBOX_TITLES:{
+        '1':'qdcg',//签到成功
+        '2':'jrgljdz',//今日鼓励金已到账
+    },
     //Nodes
     //游戏关卡配置
     YZ_SCORE:{
@@ -131,7 +136,7 @@ GC.YZ_ID = [];
 GC.SCENE = {
     node : null,
     id : null,
-    layer : []
+    layerid : []
 };
 
 GC.ISOVER = false;
@@ -146,6 +151,12 @@ GC.TOUCHLAYER_TY = 70;
  * @type {number}
  */
 GC.AI_COUNT = 4;
+
+/**
+ * 初始化判断是否签到
+ * @type {number}
+ */
+GC.IS_SIGN = 0;
 
 
 //TimeEvents

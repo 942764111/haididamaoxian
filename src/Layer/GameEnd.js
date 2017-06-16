@@ -104,9 +104,10 @@
             if(!this._instance){
                 this._instance = new _GameEnd(Data);
                 GC.SCENE['node'].addChild(this._instance,99);
+
             }
             return this._instance;
         }
     };
-
+    GC.SCENE['layerid'].push('GameEnd');
 })();

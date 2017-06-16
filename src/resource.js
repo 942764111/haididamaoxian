@@ -42,7 +42,8 @@ var res = {
     tzjl:'res/touzhujilu.json',
     tzjlitem:'res/touzhujiluitem.json',
     tznr:'res/touzhuneirong.json',
-    touzhuneirong:'res/touzhuneirong.json'
+    touzhuneirong:'res/touzhuneirong.json',
+    activityhint:'res/activityhint.json'
 };
 var res_gaoshouc = {
     img:'res/gaoshouc/img.png',
@@ -70,8 +71,16 @@ var res_txtimg = {
     tcbtn:'res/GameMove/IMG/textIMG/tc.png',
     wdbbtn:'res/GameMove/IMG/textIMG/wdb.png',
     ylqbtn:'res/GameMove/IMG/textIMG/ylq.png',
+    kjjg:'res/GameMove/IMG/textIMG/kjjg.png',
+    tzje:'res/GameMove/IMG/textIMG/tzje.png',
+    wdtz:'res/GameMove/IMG/textIMG/wdtz.png',
+    zjje:'res/GameMove/IMG/textIMG/zjje.png',
+    tzjl:'res/GameMove/IMG/textIMG/tzjl.png',
 };
-
+var res_title = {
+    qdcg:'res/GameMove/IMG/textIMG/qdcg.png',
+    jrgljdz:'res/GameMove/IMG/textIMG/jrgljdz.png',
+}
 var res_PC = {
     beipai:'res/GameMove/pc/beipai.png',
     hei1:'res/GameMove/pc/heiA.png',
@@ -129,6 +138,7 @@ var res_PC = {
 }
 
 var res_GameBegin = [
+    res.activityhint,
     res.touzhuneirong,
     res.tznr,
     res.tzjl,
@@ -191,4 +201,7 @@ for(var d in res_txtimg){
 }
 for(var e in res_PC){
     res_GameBegin.push(res_PC[e]);
+}
+for(var f in res_title){
+    res_GameBegin.push(res_title[f]);
 }

@@ -21,7 +21,7 @@
                 var btn = ccui.helper.seekWidgetByName(item, "btn");
                 btn.addTouchEventListener(Event,this);
                 btn.setVisible(false);
-                if(GC.TASK[i]['iscomplete']){
+                if(GC.TASK[i]['iscomplete']||GC.IS_SIGN){
                     wdb.setVisible(false);
                 }else{
                     ylq.setVisible(false);
@@ -147,4 +147,5 @@
             return this._instance;
         }
     }
+    GC.SCENE['layerid'].push('GamePromptbox');
 })();

@@ -605,7 +605,7 @@
         <real>0.50000</real>
         <key>children</key>
         <dict>
-          <key>i386428</key>
+          <key>i1163027</key>
           <dict>
             <key>class</key>
             <string>a74</string>
@@ -639,7 +639,7 @@
             <key>frames</key>
             <string>32.00,75.05,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
           </dict>
-          <key>i386454</key>
+          <key>i1163053</key>
           <dict>
             <key>class</key>
             <string>a66</string>
