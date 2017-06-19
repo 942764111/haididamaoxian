@@ -296,7 +296,7 @@ var GameMoveScene = cc.Scene.extend({
         //   GAME_MOVE_BTNS:['btn_add','btn_help','btn_fallback','btn_10','btn_50','btn_100'],
         switch(obj['name']){
             case 'btn_add':
-                me.addChild(new chongzhi(),999);
+                me.addChild(new chongzhi(),GC.GAME_ZORDER.on);
               //  X.Gotopup();
                 break;
             case 'btn_caidan':
@@ -310,7 +310,7 @@ var GameMoveScene = cc.Scene.extend({
                 break;
             case 'yxwf_btn':
                 this.GUIZE = new guize();
-                GC.SCENE['node'].addChild(this.GUIZE,999);
+                GC.SCENE['node'].addChild(this.GUIZE,GC.GAME_ZORDER.on);
                 break;
             case 'yxsx_btn':
                     obj.setVisible(false);
@@ -938,12 +938,7 @@ var GameMoveScene = cc.Scene.extend({
         X.releaseAllTime();
         GC.HTTPDATA.boltagainindex = 1;
 
-        GC.SCENE['node'].removeAllChildren();
-        for(var obj in X){
-            if(X[obj]._instance){
-                X[obj]._instance = null;
-            }
-        }
+        X.releaseSceneNodes();
 
         if(this.WinSize){
             delete this.WinSize;

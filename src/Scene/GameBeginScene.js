@@ -253,11 +253,6 @@ var GameBeginScene = cc.Scene.extend({
         return parseInt(me.Layer['userbean'].getString());
     },
     onExit:function() {
-        GC.SCENE['node'].removeAllChildren();
-        for(var obj in X){
-            if(X[obj]._instance){
-                X[obj]._instance = null;
-            }
-        }
+        X.releaseSceneNodes();
     }
 });

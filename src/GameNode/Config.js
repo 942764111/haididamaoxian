@@ -135,8 +135,7 @@ GC.YZ_ID = [];
  */
 GC.SCENE = {
     node : null,
-    id : null,
-    layerid : []
+    id : null
 };
 
 GC.ISOVER = false;

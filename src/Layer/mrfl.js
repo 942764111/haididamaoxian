@@ -147,5 +147,4 @@
             return this._instance;
         }
     }
-    GC.SCENE['layerid'].push('GamePromptbox');
 })();
