@@ -10,8 +10,6 @@ var res = {
     gaoshouc_png:"res/gaoshouc.png",
     GameEnd:"res/GameEnd.plist",
     GameEnd_png:"res/GameEnd.png",
-    GameSignin:"res/GameSignin.plist",
-    GameSignin_png:"res/GameSignin.png",
     GameImg_png:"res/GameMove/IMG.png",
     GameImg:"res/GameMove/IMG.plist",
     chongzhi_png:"res/chongzhi.png",
@@ -25,11 +23,7 @@ var res = {
     chongzhitishi_png:'res/chongzhitishi.png',
     Promptbox:'res/Promptbox.plist',
     Promptbox_png:'res/Promptbox.png',
-    caidanBtn:'res/caidanBtn.plist',
-    caidanBtn_png:'res/caidanBtn.png',
     usertx:'res/GameBegin/a30.png',
-    shezhi_png:'res/shezhi.png',
-    shezhi:'res/shezhi.plist',
     animation_png:'res/animation.png',
     animation:'res/animation.plist',
     sximg:'res/Promptbox/a6.png',
@@ -149,8 +143,6 @@ var res_GameBegin = [
     res.mrfl,
     res.mrflitem,
     res.usertx,
-    res.GameSignin,
-    res.GameSignin_png,
     res.GameBegin,
     res.GameBegin_png,
     res.GameImg,
@@ -165,8 +157,6 @@ var res_GameBegin = [
     res.chongzhitishi_png,
     res.Promptbox_png,
     res.Promptbox,
-    res.shezhi,
-    res.shezhi_png,
     res.yxsm,
     res.animation_png,
     res.animation,
@@ -182,9 +172,7 @@ var res_GameMove = [
     res.gaoshouc_png,
     res.gaoshouc,
     res.GameEnd_png,
-    res.GameEnd,
-    res.caidanBtn_png,
-    res.caidanBtn
+    res.GameEnd
 ];
 
 for(var i in res_jinjiec){
