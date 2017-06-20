@@ -103,12 +103,8 @@ var X = {};
     }
 
     X.closeWebPage = function(){
-       // self.location=GC.HTTPDATA.qulebuybacktopay;
         cc.audioEngine.stopMusic(true);
-        GC.YZ_ID = [];
-        GC.YZ_SCORE.XS_SCORE['res'] = null;
-        GC.YZ_SCORE.JJ_SCORE['res'] = null;
-        GC.YZ_SCORE.GS_SCORE['res'] = null;
+        X.releaseSceneNodes();
         GC.SCENE.node = null;
         GC.SCENE.id = null;
         GC.SCENE.layer = null;
