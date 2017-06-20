@@ -34,12 +34,18 @@
             cc.Director.sharedDirector.pause();
             X.releaseAllTime();
         }
+
+        if(parameters.btnsType==5){
+            this.Layer['btn_img'].x-=20;
+        }
+
         X.DataMger.Getinstance({
             'attributes':{
                 'txt':me.TXT,'img_btn_img':res_txtimg[GC.PROMPTBOX_BTNS[parameters.btnsType]]
             },
             'node':this.Layer
         });
+
         if(!this.isShowRemoveBtn){
             this.Layer['btn_remove'].setVisible(false);
         }
