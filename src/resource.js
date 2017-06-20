@@ -39,6 +39,26 @@ var res = {
     touzhuneirong:'res/touzhuneirong.json',
     activityhint:'res/activityhint.json'
 };
+var res_animation = {
+    girl_1:'res/GameBegin/a74.png',
+    girl_2:'res/GameBegin/a76.png',
+    girl_3:'res/GameBegin/a77.png',
+    girl_4:'res/GameBegin/a78.png'
+}
+var res_IMG = {
+    cz_1:'res/GameMove/IMG/chongzhi_1.png',
+    cz_2:'res/GameMove/IMG/chongzhi_2.png',
+    cz_3:'res/GameMove/IMG/chongzhi_3.png',
+    cz_4:'res/GameMove/IMG/chongzhi_4.png',
+    cz_5:'res/GameMove/IMG/chongzhi_5.png',
+    btimg:'res/GameMove/IMG/btimg.png',
+    tck:'res/GameMove/IMG/tck.png',
+    WQBJ:'res/GameMove/IMG/WQBJ.png'
+}
+var res_Button = {
+    button_1:'res/GameMove/IMG/anniu.png',
+    button_2:'res/GameMove/IMG/button/button2.png',
+}
 var res_gaoshouc = {
     img:'res/gaoshouc/img.png',
     aitx:'res/gaoshouc/a30.png'
@@ -70,6 +90,8 @@ var res_txtimg = {
     wdtz:'res/GameMove/IMG/textIMG/wdtz.png',
     zjje:'res/GameMove/IMG/textIMG/zjje.png',
     tzjl:'res/GameMove/IMG/textIMG/tzjl.png',
+    yxsm:'res/GameMove/IMG/yxsmtie.png',
+    wqkj:'res/GameMove/IMG/wqkjtie.png',
 };
 var res_title = {
     qdcg:'res/GameMove/IMG/textIMG/qdcg.png',
@@ -192,4 +214,13 @@ for(var e in res_PC){
 }
 for(var f in res_title){
     res_GameBegin.push(res_title[f]);
+}
+for(var g in res_Button){
+    res_GameBegin.push(res_Button[g]);
+}
+for(var h in res_IMG){
+    res_GameBegin.push(res_IMG[h]);
+}
+for(var j in res_animation){
+    res_GameBegin.push(res_animation[j]);
 }

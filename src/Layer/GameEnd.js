@@ -103,7 +103,7 @@
         ,Getinstance: function(Data){
             if(!this._instance){
                 this._instance = new _GameEnd(Data);
-                GC.SCENE['node'].addChild(this._instance,99);
+                GC.SCENE['node'].addChild(this._instance,GC.GAME_ZORDER.In);
 
             }
             return this._instance;

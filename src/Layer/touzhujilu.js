@@ -57,7 +57,21 @@
     additem : function(DATA){
         var list = ccui.helper.seekWidgetByName(this.json,"ListView");
         list.removeAllItems();
-        for(var i=0;i<DATA.length;i++){
+        var i= 0,me = this;
+        for(i=0;i<5;i++){
+            pushItem();
+        }
+        if(i==5){
+            me.schedule(function(){
+                if(i==DATA.length-1){
+                    me.unscheduleAllCallbacks();
+                }
+                pushItem();
+                i++;
+            },0.1);
+        }
+
+        function pushItem(){
             var item = ccs.load(res.tzjlitem).node;
             var issue = ccui.helper.seekWidgetByName(item,"qishu");
             var costpoints = ccui.helper.seekWidgetByName(item,"touzhutxt");
@@ -69,7 +83,6 @@
             issue.setColor(cc.color(GC.COLOROBJ.Lightpurple));
             title.setColor(cc.color(GC.COLOROBJ.Lightpurple));
             costpoints.setColor(cc.color(GC.COLOROBJ.Lightpurple));
-
 
             var removebtn = ccui.helper.seekWidgetByName(item, "btn");
             removebtn.day = DATA[i]['day'];

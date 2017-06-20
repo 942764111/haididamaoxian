@@ -26,10 +26,9 @@ var GameBeginScene = cc.Scene.extend({
             x: cc.winSize.width/2,
             y: cc.winSize.height/2});
 
-            this.Layer['adimn'].fps = 2;
+            this.Layer['adimn'].fps = 9;
           //  this.Layer['adimn'].autoStopWhenOver = true;
-           // this.Layer['adimn'].play(false);
-
+            this.Layer['adimn'].play();
 
         //菜单
         if(this.Layer){
@@ -46,7 +45,7 @@ var GameBeginScene = cc.Scene.extend({
         }
 
         GetHTTPSData();
-        initBtns();
+      //  initBtns();
         function initBtns(){
             //判断
             if(GC.USER_DATA.DATA['issign'] && GC.USER_DATA.DATA['encourage']){
@@ -163,8 +162,8 @@ var GameBeginScene = cc.Scene.extend({
 
         switch(event.target['name']){
             case 'btn_bean'://充值豆子
-             this.addChild(new chongzhi(),GC.GAME_ZORDER.on);
-            //    X.Gotopup();
+            // this.addChild(new chongzhi(),GC.GAME_ZORDER.on);
+                X.Gotopup();
 
                 break;
             case 'btn_fh'://返回按钮

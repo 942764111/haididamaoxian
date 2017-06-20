@@ -17,8 +17,22 @@
     additem : function(Data){
         var list = ccui.helper.seekWidgetByName(this.json,"ListView");
         list.removeAllItems();
-        var arrobj = Data,numtxt,styletxt,bigtxt;
-        for(var i=0;i<arrobj.length;i++){
+        var arrobj = Data,numtxt,styletxt,bigtxt,i= 0,me = this;
+
+        for(i=0;i<8;i++){
+            pushItem();
+        }
+        if(i==8){
+            me.schedule(function(){
+                if(i==arrobj.length-1){
+                    me.unscheduleAllCallbacks();
+                }
+                pushItem();
+                i++;
+            },0.1);
+        }
+
+        function pushItem(){
             var item = ccs.load(res.wangqiitem).node;
             var qishu = ccui.helper.seekWidgetByName(item,"qishu");
             numtxt = ccui.helper.seekWidgetByName(item,"numtxt");
