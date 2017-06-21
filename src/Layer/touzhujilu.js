@@ -57,6 +57,7 @@
     additem : function(DATA){
         var list = ccui.helper.seekWidgetByName(this.json,"ListView");
         list.removeAllItems();
+
         var i= 0,me = this;
         for(i=0;i<5;i++){
             pushItem();
@@ -89,7 +90,7 @@
             removebtn.issue = DATA[i]['issue'];
             removebtn.winpoints = DATA[i]['winpoints'];
             removebtn.costpoints = DATA[i]['costpoints'];
-            removebtn.addTouchEventListener(this.btns_Item,this);
+            removebtn.addTouchEventListener(me.btns_Item,me);
             list.pushBackCustomItem(item);
         }
     },
