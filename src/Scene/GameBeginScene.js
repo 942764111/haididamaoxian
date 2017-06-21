@@ -44,8 +44,8 @@ var GameBeginScene = cc.Scene.extend({
             me.Layer['caidanrq']['yxsx_btn2'].setVisible(false);
         }
 
-    //    GetHTTPSData();
-        initBtns();
+        GetHTTPSData();
+      //  initBtns();
         function initBtns(){
             //判断
             if(GC.USER_DATA.DATA['issign'] && GC.USER_DATA.DATA['encourage']){
