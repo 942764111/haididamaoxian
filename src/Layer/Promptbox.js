@@ -14,7 +14,7 @@
             parent: this,
             x: cc.winSize.width/2-35,
             y: cc.winSize.height/2+70});
-        this.Layer['qss'].setVisible(false);
+        this.Layer['qss_img'].setVisible(false);
         this.Layer['btn_img'].setVisible(false);
         this.Layer.setAnchorPoint(0.5,0.5);
         flax.inputManager.addListener(this.Layer['btn_qd'],this.btns_Events,InputType.click,this);
@@ -43,7 +43,7 @@
 
 
         if(parameters.btnsType==5){
-            this.Layer['qss'].setVisible(true);
+            this.Layer['qss_img'].setVisible(true);
             this.Layer['btn_img'].setVisible(false);
             X.DataMger.Getinstance({
                 'attributes':{
@@ -52,7 +52,7 @@
                 'node':this.Layer
             });
         }else{
-            this.Layer['qss'].setVisible(false);
+            this.Layer['qss_img'].setVisible(false);
             this.Layer['btn_img'].setVisible(true);
             X.DataMger.Getinstance({
                 'attributes':{
