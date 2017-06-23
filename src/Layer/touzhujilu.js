@@ -77,11 +77,14 @@
             var issue = ccui.helper.seekWidgetByName(item,"qishu");
             var costpoints = ccui.helper.seekWidgetByName(item,"touzhutxt");
             var title = ccui.helper.seekWidgetByName(item,"jianglitxt");
+            var datetxt = ccui.helper.seekWidgetByName(item,"datetxt");
             issue.setString(X.stringFormat(LNG.ISSUE,DATA[i]['issue']));
+            datetxt.setString(X.FormatDate(DATA[i]['day'].toString()));
             title.setString(DATA[i]['title']);
             costpoints.setString(X.stringFormat(LNG.TZJE,DATA[i]['costpoints']));
 
             issue.setColor(cc.color(GC.COLOROBJ.Lightpurple));
+            datetxt.setColor(cc.color(GC.COLOROBJ.Lightpurple));
             title.setColor(cc.color(GC.COLOROBJ.Lightpurple));
             costpoints.setColor(cc.color(GC.COLOROBJ.Lightpurple));
 
