@@ -959,14 +959,14 @@
         <real>0.75333</real>
         <key>children</key>
         <dict>
-          <key>i1161753</key>
+          <key>yxsx_btn2</key>
           <dict>
             <key>class</key>
-            <string>a66</string>
+            <string>a72</string>
             <key>zIndex</key>
-            <integer>0</integer>
+            <integer>3</integer>
             <key>frames</key>
-            <string>0.00,300.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
+            <string>112.00,26.55,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
           </dict>
           <key>yxsx_btn</key>
           <dict>
@@ -995,14 +995,14 @@
             <key>frames</key>
             <string>32.00,163.50,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
-          <key>yxsx_btn2</key>
+          <key>i8135</key>
           <dict>
             <key>class</key>
-            <string>a72</string>
+            <string>a66</string>
             <key>zIndex</key>
-            <integer>3</integer>
+            <integer>0</integer>
             <key>frames</key>
-            <string>112.00,26.55,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
+            <string>0.00,300.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
@@ -1020,6 +1020,15 @@
         <real>0.88134</real>
         <key>children</key>
         <dict>
+          <key>img</key>
+          <dict>
+            <key>class</key>
+            <string>a30</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>22.25,56.70,0.00,1.01022,1.01001,1.00,0,0.00,0.00</string>
+          </dict>
           <key>txt</key>
           <dict>
             <key>class</key>
@@ -1032,15 +1041,6 @@
             <string/>
             <key>input</key>
             <false/>
-          </dict>
-          <key>img</key>
-          <dict>
-            <key>class</key>
-            <string>a30</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>22.25,56.70,0.00,1.01022,1.01001,1.00,0,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
@@ -1058,6 +1058,105 @@
         <real>0.38070</real>
         <key>children</key>
         <dict>
+          <key>$_9</key>
+          <dict>
+            <key>class</key>
+            <string>a9bj</string>
+            <key>zIndex</key>
+            <integer>14</integer>
+            <key>frames</key>
+            <string>152.65,661.35,0.00,1.00000,1.00000,1.00,14,0.00,0.00</string>
+          </dict>
+          <key>$_sq</key>
+          <dict>
+            <key>class</key>
+            <string>asqbj</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>484.15,682.00,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
+          </dict>
+          <key>$_Q</key>
+          <dict>
+            <key>class</key>
+            <string>aQbj</string>
+            <key>zIndex</key>
+            <integer>17</integer>
+            <key>frames</key>
+            <string>230.65,1000.85,0.00,1.00000,1.00000,1.00,17,0.00,0.00</string>
+          </dict>
+          <key>$_8</key>
+          <dict>
+            <key>class</key>
+            <string>a8bj</string>
+            <key>zIndex</key>
+            <integer>13</integer>
+            <key>frames</key>
+            <string>236.15,586.00,0.00,1.00000,1.00000,1.00,13,0.00,0.00</string>
+          </dict>
+          <key>$_J_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>51</integer>
+            <key>frames</key>
+            <string>155.80,870.95,0.00,1.00000,1.00000,1.00,51,0.00,0.00</string>
+          </dict>
+          <key>$_sq_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>54</integer>
+            <key>frames</key>
+            <string>427.00,621.80,0.00,1.00000,1.00000,1.00,54,0.00,0.00</string>
+          </dict>
+          <key>$_8_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>63</integer>
+            <key>frames</key>
+            <string>250.20,608.95,0.00,1.00000,1.00000,1.00,63,0.00,0.00</string>
+          </dict>
+          <key>$_K</key>
+          <dict>
+            <key>class</key>
+            <string>aKbj</string>
+            <key>zIndex</key>
+            <integer>18</integer>
+            <key>frames</key>
+            <string>377.65,1037.45,0.00,1.00000,1.00000,1.00,18,0.00,0.00</string>
+          </dict>
+          <key>$_9_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>62</integer>
+            <key>frames</key>
+            <string>162.10,698.20,0.00,1.00000,1.00000,1.00,62,0.00,0.00</string>
+          </dict>
+          <key>$_3_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>68</integer>
+            <key>frames</key>
+            <string>603.50,941.20,0.00,1.00000,1.00000,1.00,68,0.00,0.00</string>
+          </dict>
+          <key>$_4_bj</key>
+          <dict>
+            <key>class</key>
+            <string>a4bj</string>
+            <key>zIndex</key>
+            <integer>26</integer>
+            <key>frames</key>
+            <string>612.85,793.00,0.00,1.00000,1.00000,1.00,26,0.00,0.00</string>
+          </dict>
           <key>$_Q_aitxt</key>
           <dict>
             <key>class</key>
@@ -1067,23 +1166,41 @@
             <key>frames</key>
             <string>255.20,1037.30,0.00,1.00000,1.00000,1.00,59,0.00,0.00</string>
           </dict>
-          <key>$_6_aitxt</key>
+          <key>$_5_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>44</integer>
+            <key>frames</key>
+            <string>587.95,614.50,0.00,1.00000,1.00000,1.00,44,0.00,0.00</string>
+          </dict>
+          <key>$_K_aitxt</key>
           <dict>
             <key>class</key>
             <string>a65</string>
             <key>zIndex</key>
-            <integer>65</integer>
+            <integer>58</integer>
             <key>frames</key>
-            <string>508.25,614.50,0.00,1.00000,1.00000,1.00,65,0.00,0.00</string>
+            <string>319.05,1057.05,0.00,1.00000,1.00000,1.00,58,0.00,0.00</string>
           </dict>
-          <key>$_Q_bj</key>
+          <key>$_10_bj</key>
           <dict>
             <key>class</key>
-            <string>aQbj</string>
+            <string>a10bj</string>
             <key>zIndex</key>
-            <integer>25</integer>
+            <integer>20</integer>
             <key>frames</key>
-            <string>228.65,996.85,0.00,1.00000,1.00000,1.00,25,0.00,0.00</string>
+            <string>118.90,788.05,0.00,1.00000,1.00000,1.00,20,0.00,0.00</string>
+          </dict>
+          <key>$_sds_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>55</integer>
+            <key>frames</key>
+            <string>515.80,815.40,0.00,1.00000,1.00000,1.00,55,0.00,0.00</string>
           </dict>
           <key>$_3</key>
           <dict>
@@ -1094,59 +1211,63 @@
             <key>frames</key>
             <string>578.35,911.90,0.00,1.00000,1.00000,1.00,8,0.00,0.00</string>
           </dict>
-          <key>$_Q_utxt</key>
+          <key>$_3_utxt</key>
           <dict>
             <key>class</key>
             <string>a67</string>
             <key>zIndex</key>
-            <integer>50</integer>
+            <integer>46</integer>
             <key>frames</key>
-            <string>240.90,958.55,0.00,1.00000,1.00000,1.00,50,0.00,0.00</string>
+            <string>595.75,863.95,0.00,1.00000,1.00000,1.00,46,0.00,0.00</string>
           </dict>
-          <key>$_max</key>
-          <dict>
-            <key>class</key>
-            <string>amaxbj</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>338.15,770.00,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
-          </dict>
-          <key>$_max_aitxt</key>
+          <key>$_2_aitxt</key>
           <dict>
             <key>class</key>
             <string>a65</string>
             <key>zIndex</key>
-            <integer>74</integer>
+            <integer>69</integer>
             <key>frames</key>
-            <string>333.75,835.60,0.00,1.00000,1.00000,1.00,74,0.00,0.00</string>
+            <string>505.75,1031.00,0.00,1.00000,1.00000,1.00,69,0.00,0.00</string>
           </dict>
-          <key>$_4_aitxt</key>
+          <key>$_9_bj</key>
           <dict>
             <key>class</key>
-            <string>a65</string>
+            <string>a9bj</string>
             <key>zIndex</key>
-            <integer>67</integer>
+            <integer>36</integer>
             <key>frames</key>
-            <string>645.15,818.50,0.00,1.00000,1.00000,1.00,67,0.00,0.00</string>
+            <string>150.65,659.50,0.00,1.00000,1.00000,1.00,36,0.00,0.00</string>
           </dict>
-          <key>$_max_bj</key>
+          <key>txt_2</key>
           <dict>
             <key>class</key>
-            <string>amaxbj</string>
+            <string>null</string>
             <key>zIndex</key>
-            <integer>38</integer>
+            <integer>78</integer>
             <key>frames</key>
-            <string>335.15,770.05,0.00,1.00000,1.00000,1.00,38,0.00,0.00</string>
+            <string>333.90,978.75,0.00,1.00000,1.00000,1.00,78,0.00,0.00,黑体-简 细体,20,#632C13,center,93,28</string>
+            <key>text</key>
+            <string/>
+            <key>input</key>
+            <false/>
           </dict>
-          <key>$_max_utxt</key>
+          <key>$_5</key>
           <dict>
             <key>class</key>
-            <string>a67</string>
+            <string>a5bj</string>
             <key>zIndex</key>
-            <integer>57</integer>
+            <integer>10</integer>
             <key>frames</key>
-            <string>346.40,728.65,0.00,1.00000,1.00000,1.00,57,0.00,0.00</string>
+            <string>580.90,660.35,0.00,1.00000,1.00000,1.00,10,0.00,0.00</string>
+          </dict>
+          <key>$_3_bj</key>
+          <dict>
+            <key>class</key>
+            <string>a3bj</string>
+            <key>zIndex</key>
+            <integer>31</integer>
+            <key>frames</key>
+            <string>574.85,921.90,0.00,1.00000,1.00000,1.00,31,0.00,0.00</string>
           </dict>
           <key>txt_1</key>
           <dict>
@@ -1161,77 +1282,14 @@
             <key>input</key>
             <false/>
           </dict>
-          <key>$_6_bj</key>
+          <key>i8213</key>
           <dict>
             <key>class</key>
-            <string>a6bj</string>
+            <string>a35</string>
             <key>zIndex</key>
-            <integer>32</integer>
+            <integer>19</integer>
             <key>frames</key>
-            <string>493.65,586.45,0.00,1.00000,1.00000,1.00,32,0.00,0.00</string>
-          </dict>
-          <key>$_min</key>
-          <dict>
-            <key>class</key>
-            <string>aminbj</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>425.15,767.00,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
-          </dict>
-          <key>$_min_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>73</integer>
-            <key>frames</key>
-            <string>427.00,837.35,0.00,1.00000,1.00000,1.00,73,0.00,0.00</string>
-          </dict>
-          <key>$_4</key>
-          <dict>
-            <key>class</key>
-            <string>a4bj</string>
-            <key>zIndex</key>
-            <integer>9</integer>
-            <key>frames</key>
-            <string>614.60,788.00,0.00,1.00000,1.00000,1.00,9,0.00,0.00</string>
-          </dict>
-          <key>$_7</key>
-          <dict>
-            <key>class</key>
-            <string>a7bj</string>
-            <key>zIndex</key>
-            <integer>12</integer>
-            <key>frames</key>
-            <string>374.65,557.00,0.00,1.00000,1.00000,1.00,12,0.00,0.00</string>
-          </dict>
-          <key>$_min_bj</key>
-          <dict>
-            <key>class</key>
-            <string>aminbj</string>
-            <key>zIndex</key>
-            <integer>37</integer>
-            <key>frames</key>
-            <string>426.90,768.00,0.00,1.00000,1.00000,1.00,37,0.00,0.00</string>
-          </dict>
-          <key>$_min_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>56</integer>
-            <key>frames</key>
-            <string>414.05,729.95,0.00,1.00000,1.00000,1.00,56,0.00,0.00</string>
-          </dict>
-          <key>$_7_bj</key>
-          <dict>
-            <key>class</key>
-            <string>a7bj</string>
-            <key>zIndex</key>
-            <integer>34</integer>
-            <key>frames</key>
-            <string>369.70,556.45,0.00,1.00000,1.00000,1.00,34,0.00,0.00</string>
+            <string>813.85,905.00,0.00,1.00000,1.00000,1.00,19,0.00,0.00</string>
           </dict>
           <key>$_pb</key>
           <dict>
@@ -1242,41 +1300,23 @@
             <key>frames</key>
             <string>289.15,682.00,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
           </dict>
-          <key>$_10_utxt</key>
+          <key>$_max</key>
           <dict>
             <key>class</key>
-            <string>a67</string>
+            <string>amaxbj</string>
             <key>zIndex</key>
-            <integer>42</integer>
+            <integer>5</integer>
             <key>frames</key>
-            <string>112.60,743.80,0.00,1.00000,1.00000,1.00,42,0.00,0.00</string>
+            <string>338.15,770.00,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
           </dict>
-          <key>$_pb_aitxt</key>
+          <key>$_A_bj</key>
           <dict>
             <key>class</key>
-            <string>a65</string>
+            <string>aAbj</string>
             <key>zIndex</key>
-            <integer>75</integer>
+            <integer>30</integer>
             <key>frames</key>
-            <string>237.20,748.25,0.00,1.00000,1.00000,1.00,75,0.00,0.00</string>
-          </dict>
-          <key>$_10_bj</key>
-          <dict>
-            <key>class</key>
-            <string>a10bj</string>
-            <key>zIndex</key>
-            <integer>20</integer>
-            <key>frames</key>
-            <string>118.90,788.05,0.00,1.00000,1.00000,1.00,20,0.00,0.00</string>
-          </dict>
-          <key>$_pb_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>52</integer>
-            <key>frames</key>
-            <string>330.05,621.80,0.00,1.00000,1.00000,1.00,52,0.00,0.00</string>
+            <string>403.40,1033.35,180.00,1.00000,1.00000,1.00,30,0.00,180.00</string>
           </dict>
           <key>$_r</key>
           <dict>
@@ -1287,14 +1327,18 @@
             <key>frames</key>
             <string>289.65,868.45,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
-          <key>$_pb_bj</key>
+          <key>txt_3</key>
           <dict>
             <key>class</key>
-            <string>apbbj</string>
+            <string>null</string>
             <key>zIndex</key>
-            <integer>33</integer>
+            <integer>77</integer>
             <key>frames</key>
-            <string>295.15,686.00,0.00,1.00000,1.00000,1.00,33,0.00,0.00</string>
+            <string>341.85,867.10,0.00,1.00000,1.00000,1.00,77,0.00,0.00,黑体-简 细体,17,#FF38E1,center,81,25</string>
+            <key>text</key>
+            <string/>
+            <key>input</key>
+            <false/>
           </dict>
           <key>$_10_aitxt</key>
           <dict>
@@ -1305,6 +1349,123 @@
             <key>frames</key>
             <string>112.60,823.50,0.00,1.00000,1.00000,1.00,61,0.00,0.00</string>
           </dict>
+          <key>$_6_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>65</integer>
+            <key>frames</key>
+            <string>508.25,614.50,0.00,1.00000,1.00000,1.00,65,0.00,0.00</string>
+          </dict>
+          <key>$_max_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>74</integer>
+            <key>frames</key>
+            <string>333.75,835.60,0.00,1.00000,1.00000,1.00,74,0.00,0.00</string>
+          </dict>
+          <key>$_8_bj</key>
+          <dict>
+            <key>class</key>
+            <string>a8bj</string>
+            <key>zIndex</key>
+            <integer>22</integer>
+            <key>frames</key>
+            <string>233.15,586.45,0.00,1.00000,1.00000,1.00,22,0.00,0.00</string>
+          </dict>
+          <key>$_pb_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>75</integer>
+            <key>frames</key>
+            <string>237.20,748.25,0.00,1.00000,1.00000,1.00,75,0.00,0.00</string>
+          </dict>
+          <key>$_2_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>47</integer>
+            <key>frames</key>
+            <string>524.90,955.05,0.00,1.00000,1.00000,1.00,47,0.00,0.00</string>
+          </dict>
+          <key>$_9_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>41</integer>
+            <key>frames</key>
+            <string>167.05,614.50,0.00,1.00000,1.00000,1.00,41,0.00,0.00</string>
+          </dict>
+          <key>$_max_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>57</integer>
+            <key>frames</key>
+            <string>346.40,728.65,0.00,1.00000,1.00000,1.00,57,0.00,0.00</string>
+          </dict>
+          <key>$_6_bj</key>
+          <dict>
+            <key>class</key>
+            <string>a6bj</string>
+            <key>zIndex</key>
+            <integer>32</integer>
+            <key>frames</key>
+            <string>493.65,586.45,0.00,1.00000,1.00000,1.00,32,0.00,0.00</string>
+          </dict>
+          <key>$_10</key>
+          <dict>
+            <key>class</key>
+            <string>a10bj</string>
+            <key>zIndex</key>
+            <integer>15</integer>
+            <key>frames</key>
+            <string>118.90,789.00,0.00,1.00000,1.00000,1.00,15,0.00,0.00</string>
+          </dict>
+          <key>$_pb_bj</key>
+          <dict>
+            <key>class</key>
+            <string>apbbj</string>
+            <key>zIndex</key>
+            <integer>33</integer>
+            <key>frames</key>
+            <string>295.15,686.00,0.00,1.00000,1.00000,1.00,33,0.00,0.00</string>
+          </dict>
+          <key>$_min</key>
+          <dict>
+            <key>class</key>
+            <string>aminbj</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>425.15,767.00,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+          </dict>
+          <key>$_max_bj</key>
+          <dict>
+            <key>class</key>
+            <string>amaxbj</string>
+            <key>zIndex</key>
+            <integer>38</integer>
+            <key>frames</key>
+            <string>335.15,770.05,0.00,1.00000,1.00000,1.00,38,0.00,0.00</string>
+          </dict>
+          <key>$_min_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>73</integer>
+            <key>frames</key>
+            <string>427.00,837.35,0.00,1.00000,1.00000,1.00,73,0.00,0.00</string>
+          </dict>
           <key>$_4_utxt</key>
           <dict>
             <key>class</key>
@@ -1313,6 +1474,186 @@
             <integer>45</integer>
             <key>frames</key>
             <string>633.65,742.80,0.00,1.00000,1.00000,1.00,45,0.00,0.00</string>
+          </dict>
+          <key>$_pb_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>52</integer>
+            <key>frames</key>
+            <string>330.05,621.80,0.00,1.00000,1.00000,1.00,52,0.00,0.00</string>
+          </dict>
+          <key>$_2</key>
+          <dict>
+            <key>class</key>
+            <string>a2bj</string>
+            <key>zIndex</key>
+            <integer>7</integer>
+            <key>frames</key>
+            <string>517.35,993.85,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
+          </dict>
+          <key>$_min_bj</key>
+          <dict>
+            <key>class</key>
+            <string>aminbj</string>
+            <key>zIndex</key>
+            <integer>37</integer>
+            <key>frames</key>
+            <string>426.90,768.00,0.00,1.00000,1.00000,1.00,37,0.00,0.00</string>
+          </dict>
+          <key>$_A_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>70</integer>
+            <key>frames</key>
+            <string>447.05,1057.05,0.00,1.00000,1.00000,1.00,70,0.00,0.00</string>
+          </dict>
+          <key>$_7_bj</key>
+          <dict>
+            <key>class</key>
+            <string>a7bj</string>
+            <key>zIndex</key>
+            <integer>34</integer>
+            <key>frames</key>
+            <string>369.70,556.45,0.00,1.00000,1.00000,1.00,34,0.00,0.00</string>
+          </dict>
+          <key>$_min_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>56</integer>
+            <key>frames</key>
+            <string>414.05,729.95,0.00,1.00000,1.00000,1.00,56,0.00,0.00</string>
+          </dict>
+          <key>$_K_bj</key>
+          <dict>
+            <key>class</key>
+            <string>aKbj</string>
+            <key>zIndex</key>
+            <integer>28</integer>
+            <key>frames</key>
+            <string>377.65,1035.35,0.00,1.00000,1.00000,1.00,28,0.00,0.00</string>
+          </dict>
+          <key>$_6_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>43</integer>
+            <key>frames</key>
+            <string>504.15,534.25,0.00,1.00000,1.00000,1.00,43,0.00,0.00</string>
+          </dict>
+          <key>$_K_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>49</integer>
+            <key>frames</key>
+            <string>341.20,996.35,0.00,1.00000,1.00000,1.00,49,0.00,0.00</string>
+          </dict>
+          <key>$_A_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>48</integer>
+            <key>frames</key>
+            <string>423.50,996.35,0.00,1.00000,1.00000,1.00,48,0.00,0.00</string>
+          </dict>
+          <key>$_10_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>42</integer>
+            <key>frames</key>
+            <string>112.60,743.80,0.00,1.00000,1.00000,1.00,42,0.00,0.00</string>
+          </dict>
+          <key>$_J</key>
+          <dict>
+            <key>class</key>
+            <string>aJbj</string>
+            <key>zIndex</key>
+            <integer>16</integer>
+            <key>frames</key>
+            <string>132.15,919.90,0.00,1.00000,1.00000,1.00,16,0.00,0.00</string>
+          </dict>
+          <key>$_4</key>
+          <dict>
+            <key>class</key>
+            <string>a4bj</string>
+            <key>zIndex</key>
+            <integer>9</integer>
+            <key>frames</key>
+            <string>614.60,788.00,0.00,1.00000,1.00000,1.00,9,0.00,0.00</string>
+          </dict>
+          <key>$_8_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>39</integer>
+            <key>frames</key>
+            <string>271.05,522.80,0.00,1.00000,1.00000,1.00,39,0.00,0.00</string>
+          </dict>
+          <key>$_5_bj</key>
+          <dict>
+            <key>class</key>
+            <string>a5bj</string>
+            <key>zIndex</key>
+            <integer>23</integer>
+            <key>frames</key>
+            <string>581.60,659.50,0.00,1.00000,1.00000,1.00,23,0.00,0.00</string>
+          </dict>
+          <key>$_7</key>
+          <dict>
+            <key>class</key>
+            <string>a7bj</string>
+            <key>zIndex</key>
+            <integer>12</integer>
+            <key>frames</key>
+            <string>374.65,557.00,0.00,1.00000,1.00000,1.00,12,0.00,0.00</string>
+          </dict>
+          <key>$_J_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>60</integer>
+            <key>frames</key>
+            <string>156.15,955.05,0.00,1.00000,1.00000,1.00,60,0.00,0.00</string>
+          </dict>
+          <key>$_5_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>66</integer>
+            <key>frames</key>
+            <string>587.95,698.20,0.00,1.00000,1.00000,1.00,66,0.00,0.00</string>
+          </dict>
+          <key>$_J_bj</key>
+          <dict>
+            <key>class</key>
+            <string>aJbj</string>
+            <key>zIndex</key>
+            <integer>35</integer>
+            <key>frames</key>
+            <string>132.15,914.90,0.00,1.00000,1.00000,1.00,35,0.00,0.00</string>
+          </dict>
+          <key>$_r_aitxt</key>
+          <dict>
+            <key>class</key>
+            <string>a65</string>
+            <key>zIndex</key>
+            <integer>71</integer>
+            <key>frames</key>
+            <string>316.25,941.20,0.00,1.00000,1.00000,1.00,71,0.00,0.00</string>
           </dict>
           <key>$_7_aitxt</key>
           <dict>
@@ -1332,60 +1673,6 @@
             <key>frames</key>
             <string>294.40,869.45,0.00,1.00000,1.00000,1.00,24,0.00,0.00</string>
           </dict>
-          <key>$_5</key>
-          <dict>
-            <key>class</key>
-            <string>a5bj</string>
-            <key>zIndex</key>
-            <integer>10</integer>
-            <key>frames</key>
-            <string>580.90,660.35,0.00,1.00000,1.00000,1.00,10,0.00,0.00</string>
-          </dict>
-          <key>$_6_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>43</integer>
-            <key>frames</key>
-            <string>504.15,534.25,0.00,1.00000,1.00000,1.00,43,0.00,0.00</string>
-          </dict>
-          <key>$_3_bj</key>
-          <dict>
-            <key>class</key>
-            <string>a3bj</string>
-            <key>zIndex</key>
-            <integer>31</integer>
-            <key>frames</key>
-            <string>574.85,921.90,0.00,1.00000,1.00000,1.00,31,0.00,0.00</string>
-          </dict>
-          <key>$_r_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>71</integer>
-            <key>frames</key>
-            <string>316.25,941.20,0.00,1.00000,1.00000,1.00,71,0.00,0.00</string>
-          </dict>
-          <key>$_sds</key>
-          <dict>
-            <key>class</key>
-            <string>asdsbj</string>
-            <key>zIndex</key>
-            <integer>1</integer>
-            <key>frames</key>
-            <string>484.65,868.95,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
-          </dict>
-          <key>i1161831</key>
-          <dict>
-            <key>class</key>
-            <string>a35</string>
-            <key>zIndex</key>
-            <integer>19</integer>
-            <key>frames</key>
-            <string>813.85,905.00,0.00,1.00000,1.00000,1.00,19,0.00,0.00</string>
-          </dict>
           <key>$_7_utxt</key>
           <dict>
             <key>class</key>
@@ -1394,186 +1681,6 @@
             <integer>40</integer>
             <key>frames</key>
             <string>419.15,499.50,0.00,1.00000,1.00000,1.00,40,0.00,0.00</string>
-          </dict>
-          <key>$_sds_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>72</integer>
-            <key>frames</key>
-            <string>447.05,941.20,0.00,1.00000,1.00000,1.00,72,0.00,0.00</string>
-          </dict>
-          <key>$_8</key>
-          <dict>
-            <key>class</key>
-            <string>a8bj</string>
-            <key>zIndex</key>
-            <integer>13</integer>
-            <key>frames</key>
-            <string>236.15,586.00,0.00,1.00000,1.00000,1.00,13,0.00,0.00</string>
-          </dict>
-          <key>$_sds_bj</key>
-          <dict>
-            <key>class</key>
-            <string>asdsbj</string>
-            <key>zIndex</key>
-            <integer>27</integer>
-            <key>frames</key>
-            <string>484.65,869.95,0.00,1.00000,1.00000,1.00,27,0.00,0.00</string>
-          </dict>
-          <key>$_5_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>66</integer>
-            <key>frames</key>
-            <string>587.95,698.20,0.00,1.00000,1.00000,1.00,66,0.00,0.00</string>
-          </dict>
-          <key>$_9_bj</key>
-          <dict>
-            <key>class</key>
-            <string>a9bj</string>
-            <key>zIndex</key>
-            <integer>36</integer>
-            <key>frames</key>
-            <string>150.65,659.50,0.00,1.00000,1.00000,1.00,36,0.00,0.00</string>
-          </dict>
-          <key>$_sds_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>55</integer>
-            <key>frames</key>
-            <string>515.80,815.40,0.00,1.00000,1.00000,1.00,55,0.00,0.00</string>
-          </dict>
-          <key>$_4_bj</key>
-          <dict>
-            <key>class</key>
-            <string>a4bj</string>
-            <key>zIndex</key>
-            <integer>26</integer>
-            <key>frames</key>
-            <string>612.85,793.00,0.00,1.00000,1.00000,1.00,26,0.00,0.00</string>
-          </dict>
-          <key>$_8_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>63</integer>
-            <key>frames</key>
-            <string>250.20,608.95,0.00,1.00000,1.00000,1.00,63,0.00,0.00</string>
-          </dict>
-          <key>$_sq</key>
-          <dict>
-            <key>class</key>
-            <string>asqbj</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>484.15,682.00,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
-          </dict>
-          <key>$_8_bj</key>
-          <dict>
-            <key>class</key>
-            <string>a8bj</string>
-            <key>zIndex</key>
-            <integer>22</integer>
-            <key>frames</key>
-            <string>233.15,586.45,0.00,1.00000,1.00000,1.00,22,0.00,0.00</string>
-          </dict>
-          <key>$_sq_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>76</integer>
-            <key>frames</key>
-            <string>508.25,748.25,0.00,1.00000,1.00000,1.00,76,0.00,0.00</string>
-          </dict>
-          <key>$_8_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>39</integer>
-            <key>frames</key>
-            <string>271.05,522.80,0.00,1.00000,1.00000,1.00,39,0.00,0.00</string>
-          </dict>
-          <key>$_sq_bj</key>
-          <dict>
-            <key>class</key>
-            <string>asqbj</string>
-            <key>zIndex</key>
-            <integer>29</integer>
-            <key>frames</key>
-            <string>484.15,686.00,0.00,1.00000,1.00000,1.00,29,0.00,0.00</string>
-          </dict>
-          <key>$_9</key>
-          <dict>
-            <key>class</key>
-            <string>a9bj</string>
-            <key>zIndex</key>
-            <integer>14</integer>
-            <key>frames</key>
-            <string>152.65,661.35,0.00,1.00000,1.00000,1.00,14,0.00,0.00</string>
-          </dict>
-          <key>$_sq_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>54</integer>
-            <key>frames</key>
-            <string>427.00,621.80,0.00,1.00000,1.00000,1.00,54,0.00,0.00</string>
-          </dict>
-          <key>$_9_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>62</integer>
-            <key>frames</key>
-            <string>162.10,698.20,0.00,1.00000,1.00000,1.00,62,0.00,0.00</string>
-          </dict>
-          <key>$_r_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>53</integer>
-            <key>frames</key>
-            <string>220.05,818.50,0.00,1.00000,1.00000,1.00,53,0.00,0.00</string>
-          </dict>
-          <key>$_3_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>68</integer>
-            <key>frames</key>
-            <string>603.50,941.20,0.00,1.00000,1.00000,1.00,68,0.00,0.00</string>
-          </dict>
-          <key>$_9_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>41</integer>
-            <key>frames</key>
-            <string>167.05,614.50,0.00,1.00000,1.00000,1.00,41,0.00,0.00</string>
-          </dict>
-          <key>$_2_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>47</integer>
-            <key>frames</key>
-            <string>524.90,955.05,0.00,1.00000,1.00000,1.00,47,0.00,0.00</string>
           </dict>
           <key>$_A</key>
           <dict>
@@ -1584,148 +1691,41 @@
             <key>frames</key>
             <string>405.65,1035.45,180.00,1.00000,1.00000,1.00,6,0.00,180.00</string>
           </dict>
-          <key>txt_2</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>78</integer>
-            <key>frames</key>
-            <string>333.90,978.75,0.00,1.00000,1.00000,1.00,78,0.00,0.00,黑体-简 细体,20,#632C13,center,93,28</string>
-            <key>text</key>
-            <string/>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>$_A_aitxt</key>
+          <key>$_sds_aitxt</key>
           <dict>
             <key>class</key>
             <string>a65</string>
             <key>zIndex</key>
-            <integer>70</integer>
+            <integer>72</integer>
             <key>frames</key>
-            <string>447.05,1057.05,0.00,1.00000,1.00000,1.00,70,0.00,0.00</string>
+            <string>447.05,941.20,0.00,1.00000,1.00000,1.00,72,0.00,0.00</string>
           </dict>
-          <key>$_5_bj</key>
-          <dict>
-            <key>class</key>
-            <string>a5bj</string>
-            <key>zIndex</key>
-            <integer>23</integer>
-            <key>frames</key>
-            <string>581.60,659.50,0.00,1.00000,1.00000,1.00,23,0.00,0.00</string>
-          </dict>
-          <key>$_A_bj</key>
-          <dict>
-            <key>class</key>
-            <string>aAbj</string>
-            <key>zIndex</key>
-            <integer>30</integer>
-            <key>frames</key>
-            <string>403.40,1033.35,180.00,1.00000,1.00000,1.00,30,0.00,180.00</string>
-          </dict>
-          <key>txt_3</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>77</integer>
-            <key>frames</key>
-            <string>341.85,867.10,0.00,1.00000,1.00000,1.00,77,0.00,0.00,黑体-简 细体,17,#FF38E1,center,81,25</string>
-            <key>text</key>
-            <string/>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>$_A_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>48</integer>
-            <key>frames</key>
-            <string>423.50,996.35,0.00,1.00000,1.00000,1.00,48,0.00,0.00</string>
-          </dict>
-          <key>$_J</key>
-          <dict>
-            <key>class</key>
-            <string>aJbj</string>
-            <key>zIndex</key>
-            <integer>16</integer>
-            <key>frames</key>
-            <string>132.15,919.90,0.00,1.00000,1.00000,1.00,16,0.00,0.00</string>
-          </dict>
-          <key>$_3_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>46</integer>
-            <key>frames</key>
-            <string>595.75,863.95,0.00,1.00000,1.00000,1.00,46,0.00,0.00</string>
-          </dict>
-          <key>$_5_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>44</integer>
-            <key>frames</key>
-            <string>587.95,614.50,0.00,1.00000,1.00000,1.00,44,0.00,0.00</string>
-          </dict>
-          <key>$_J_aitxt</key>
+          <key>$_4_aitxt</key>
           <dict>
             <key>class</key>
             <string>a65</string>
             <key>zIndex</key>
-            <integer>60</integer>
+            <integer>67</integer>
             <key>frames</key>
-            <string>156.15,955.05,0.00,1.00000,1.00000,1.00,60,0.00,0.00</string>
+            <string>645.15,818.50,0.00,1.00000,1.00000,1.00,67,0.00,0.00</string>
           </dict>
-          <key>$_J_bj</key>
+          <key>$_sq_aitxt</key>
           <dict>
             <key>class</key>
-            <string>aJbj</string>
+            <string>a65</string>
             <key>zIndex</key>
-            <integer>35</integer>
+            <integer>76</integer>
             <key>frames</key>
-            <string>132.15,914.90,0.00,1.00000,1.00000,1.00,35,0.00,0.00</string>
+            <string>508.25,748.25,0.00,1.00000,1.00000,1.00,76,0.00,0.00</string>
           </dict>
-          <key>$_2</key>
+          <key>$_sds</key>
           <dict>
             <key>class</key>
-            <string>a2bj</string>
+            <string>asdsbj</string>
             <key>zIndex</key>
-            <integer>7</integer>
+            <integer>1</integer>
             <key>frames</key>
-            <string>517.35,993.85,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
-          </dict>
-          <key>$_J_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>51</integer>
-            <key>frames</key>
-            <string>155.80,870.95,0.00,1.00000,1.00000,1.00,51,0.00,0.00</string>
-          </dict>
-          <key>$_10</key>
-          <dict>
-            <key>class</key>
-            <string>a10bj</string>
-            <key>zIndex</key>
-            <integer>15</integer>
-            <key>frames</key>
-            <string>118.90,789.00,0.00,1.00000,1.00000,1.00,15,0.00,0.00</string>
-          </dict>
-          <key>$_K</key>
-          <dict>
-            <key>class</key>
-            <string>aKbj</string>
-            <key>zIndex</key>
-            <integer>18</integer>
-            <key>frames</key>
-            <string>377.65,1037.45,0.00,1.00000,1.00000,1.00,18,0.00,0.00</string>
+            <string>484.65,868.95,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
           </dict>
           <key>$_2_bj</key>
           <dict>
@@ -1736,6 +1736,42 @@
             <key>frames</key>
             <string>515.60,998.85,0.00,1.00000,1.00000,1.00,21,0.00,0.00</string>
           </dict>
+          <key>$_r_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>53</integer>
+            <key>frames</key>
+            <string>220.05,818.50,0.00,1.00000,1.00000,1.00,53,0.00,0.00</string>
+          </dict>
+          <key>$_sq_bj</key>
+          <dict>
+            <key>class</key>
+            <string>asqbj</string>
+            <key>zIndex</key>
+            <integer>29</integer>
+            <key>frames</key>
+            <string>484.15,686.00,0.00,1.00000,1.00000,1.00,29,0.00,0.00</string>
+          </dict>
+          <key>$_Q_utxt</key>
+          <dict>
+            <key>class</key>
+            <string>a67</string>
+            <key>zIndex</key>
+            <integer>50</integer>
+            <key>frames</key>
+            <string>240.90,958.55,0.00,1.00000,1.00000,1.00,50,0.00,0.00</string>
+          </dict>
+          <key>$_sds_bj</key>
+          <dict>
+            <key>class</key>
+            <string>asdsbj</string>
+            <key>zIndex</key>
+            <integer>27</integer>
+            <key>frames</key>
+            <string>484.65,869.95,0.00,1.00000,1.00000,1.00,27,0.00,0.00</string>
+          </dict>
           <key>$_6</key>
           <dict>
             <key>class</key>
@@ -1745,50 +1781,14 @@
             <key>frames</key>
             <string>498.35,591.00,0.00,1.00000,1.00000,1.00,11,0.00,0.00</string>
           </dict>
-          <key>$_K_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>58</integer>
-            <key>frames</key>
-            <string>319.05,1057.05,0.00,1.00000,1.00000,1.00,58,0.00,0.00</string>
-          </dict>
-          <key>$_K_bj</key>
-          <dict>
-            <key>class</key>
-            <string>aKbj</string>
-            <key>zIndex</key>
-            <integer>28</integer>
-            <key>frames</key>
-            <string>377.65,1035.35,0.00,1.00000,1.00000,1.00,28,0.00,0.00</string>
-          </dict>
-          <key>$_2_aitxt</key>
-          <dict>
-            <key>class</key>
-            <string>a65</string>
-            <key>zIndex</key>
-            <integer>69</integer>
-            <key>frames</key>
-            <string>505.75,1031.00,0.00,1.00000,1.00000,1.00,69,0.00,0.00</string>
-          </dict>
-          <key>$_K_utxt</key>
-          <dict>
-            <key>class</key>
-            <string>a67</string>
-            <key>zIndex</key>
-            <integer>49</integer>
-            <key>frames</key>
-            <string>341.20,996.35,0.00,1.00000,1.00000,1.00,49,0.00,0.00</string>
-          </dict>
-          <key>$_Q</key>
+          <key>$_Q_bj</key>
           <dict>
             <key>class</key>
             <string>aQbj</string>
             <key>zIndex</key>
-            <integer>17</integer>
+            <integer>25</integer>
             <key>frames</key>
-            <string>230.65,1000.85,0.00,1.00000,1.00000,1.00,17,0.00,0.00</string>
+            <string>228.65,996.85,0.00,1.00000,1.00000,1.00,25,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
@@ -1806,6 +1806,37 @@
         <real>0.50331</real>
         <key>children</key>
         <dict>
+          <key>EnergyBartxt</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>15</integer>
+            <key>frames</key>
+            <string>648.50,1300.45,0.00,1.00000,1.00000,1.00,15,0.00,0.00,黑体-简 细体,40,#FFFFFF,center,56,44</string>
+            <key>text</key>
+            <string/>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>btn_2500</key>
+          <dict>
+            <key>class</key>
+            <string>a23</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>544.80,74.50,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+          </dict>
+          <key>rouletteIndex</key>
+          <dict>
+            <key>class</key>
+            <string>rouletteIndex</string>
+            <key>zIndex</key>
+            <integer>1</integer>
+            <key>frames</key>
+            <string>47.30,507.85,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
+          </dict>
           <key>numtxt</key>
           <dict>
             <key>class</key>
@@ -1819,27 +1850,23 @@
             <key>input</key>
             <false/>
           </dict>
-          <key>rouletteIndex</key>
+          <key>btn_1000</key>
           <dict>
             <key>class</key>
-            <string>rouletteIndex</string>
+            <string>a24</string>
             <key>zIndex</key>
-            <integer>1</integer>
+            <integer>2</integer>
             <key>frames</key>
-            <string>47.30,507.85,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
+            <string>353.85,74.50,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
           </dict>
-          <key>styletxt</key>
+          <key>btn_fallback</key>
           <dict>
             <key>class</key>
-            <string>null</string>
+            <string>a32</string>
             <key>zIndex</key>
-            <integer>12</integer>
+            <integer>3</integer>
             <key>frames</key>
-            <string>385.40,1233.30,0.00,1.00000,1.00000,1.00,12,0.00,0.00,黑体-简 细体,35,#FFFFFF,center,68,42</string>
-            <key>text</key>
-            <string>中</string>
-            <key>input</key>
-            <false/>
+            <string>732.25,63.00,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
           </dict>
           <key>ai_3</key>
           <dict>
@@ -1850,104 +1877,6 @@
             <key>frames</key>
             <string>484.55,357.30,0.00,1.00000,1.00000,1.00,18,0.00,0.00</string>
           </dict>
-          <key>userbean</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>8</integer>
-            <key>frames</key>
-            <string>373.35,204.10,0.00,1.00000,1.00000,1.00,8,0.00,0.00,楷体-简 粗体,35,#FFFF00,left,149,53</string>
-            <key>text</key>
-            <string>2000</string>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>img</key>
-          <dict>
-            <key>class</key>
-            <string>img</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>425.00,677.00,0.00,1.13330,1.00000,1.00,0,0.00,0.00</string>
-          </dict>
-          <key>btn_500</key>
-          <dict>
-            <key>class</key>
-            <string>a38</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>173.35,74.50,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
-          </dict>
-          <key>btn_wangqi</key>
-          <dict>
-            <key>class</key>
-            <string>a61</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>619.70,1148.65,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
-          </dict>
-          <key>btn_add</key>
-          <dict>
-            <key>class</key>
-            <string>a7</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>329.80,174.60,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
-          </dict>
-          <key>EnergyBar</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>14</integer>
-            <key>frames</key>
-            <string>443.85,1301.45,0.00,1.00002,1.00000,1.00,14,0.00,0.00,苹方-简 常规体,26,#FFFFFF,center,278,46</string>
-            <key>text</key>
-            <string>开奖倒计时:</string>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>btn_caidan</key>
-          <dict>
-            <key>class</key>
-            <string>a64</string>
-            <key>zIndex</key>
-            <integer>10</integer>
-            <key>frames</key>
-            <string>748.25,1281.45,0.00,1.00000,1.00000,1.00,10,0.00,0.00</string>
-          </dict>
-          <key>btn_2500</key>
-          <dict>
-            <key>class</key>
-            <string>a23</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>544.80,74.50,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
-          </dict>
-          <key>btn_1000</key>
-          <dict>
-            <key>class</key>
-            <string>a24</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>353.85,74.50,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
-          </dict>
-          <key>ai_1</key>
-          <dict>
-            <key>class</key>
-            <string>dn</string>
-            <key>zIndex</key>
-            <integer>16</integer>
-            <key>frames</key>
-            <string>98.50,398.50,0.00,1.00000,1.00000,1.00,16,0.00,0.00</string>
-          </dict>
           <key>btn_fanhui</key>
           <dict>
             <key>class</key>
@@ -1957,23 +1886,14 @@
             <key>frames</key>
             <string>82.70,1280.45,0.00,1.00000,1.00000,1.00,9,0.00,0.00</string>
           </dict>
-          <key>caidanrq</key>
+          <key>btn_500</key>
           <dict>
             <key>class</key>
-            <string>caidanrq</string>
+            <string>a38</string>
             <key>zIndex</key>
-            <integer>20</integer>
+            <integer>5</integer>
             <key>frames</key>
-            <string>668.35,1167.45,0.00,1.00000,1.00000,1.00,20,0.00,0.00</string>
-          </dict>
-          <key>ai_2</key>
-          <dict>
-            <key>class</key>
-            <string>dn</string>
-            <key>zIndex</key>
-            <integer>17</integer>
-            <key>frames</key>
-            <string>283.45,357.30,0.00,1.00000,1.00000,1.00,17,0.00,0.00</string>
+            <string>173.35,74.50,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
           </dict>
           <key>bigtxt</key>
           <dict>
@@ -1988,27 +1908,76 @@
             <key>input</key>
             <false/>
           </dict>
-          <key>btn_fallback</key>
-          <dict>
-            <key>class</key>
-            <string>a32</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>732.25,63.00,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
-          </dict>
-          <key>EnergyBartxt</key>
+          <key>styletxt</key>
           <dict>
             <key>class</key>
             <string>null</string>
             <key>zIndex</key>
-            <integer>15</integer>
+            <integer>12</integer>
             <key>frames</key>
-            <string>648.50,1300.45,0.00,1.00000,1.00000,1.00,15,0.00,0.00,黑体-简 细体,40,#FFFFFF,center,56,44</string>
+            <string>385.40,1233.30,0.00,1.00000,1.00000,1.00,12,0.00,0.00,黑体-简 细体,35,#FFFFFF,center,68,42</string>
             <key>text</key>
-            <string/>
+            <string>中</string>
             <key>input</key>
             <false/>
+          </dict>
+          <key>caidanrq</key>
+          <dict>
+            <key>class</key>
+            <string>caidanrq</string>
+            <key>zIndex</key>
+            <integer>20</integer>
+            <key>frames</key>
+            <string>668.35,1167.45,0.00,1.00000,1.00000,1.00,20,0.00,0.00</string>
+          </dict>
+          <key>btn_wangqi</key>
+          <dict>
+            <key>class</key>
+            <string>a61</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>619.70,1148.65,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
+          </dict>
+          <key>ai_2</key>
+          <dict>
+            <key>class</key>
+            <string>dn</string>
+            <key>zIndex</key>
+            <integer>17</integer>
+            <key>frames</key>
+            <string>283.45,357.30,0.00,1.00000,1.00000,1.00,17,0.00,0.00</string>
+          </dict>
+          <key>img</key>
+          <dict>
+            <key>class</key>
+            <string>img</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>425.00,677.00,0.00,1.13330,1.00000,1.00,0,0.00,0.00</string>
+          </dict>
+          <key>EnergyBar</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>14</integer>
+            <key>frames</key>
+            <string>443.85,1301.45,0.00,1.00002,1.00000,1.00,14,0.00,0.00,苹方-简 常规体,26,#FFFFFF,center,278,46</string>
+            <key>text</key>
+            <string>开奖倒计时:</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>ai_1</key>
+          <dict>
+            <key>class</key>
+            <string>dn</string>
+            <key>zIndex</key>
+            <integer>16</integer>
+            <key>frames</key>
+            <string>98.50,398.50,0.00,1.00000,1.00000,1.00,16,0.00,0.00</string>
           </dict>
           <key>ai_4</key>
           <dict>
@@ -2018,6 +1987,37 @@
             <integer>19</integer>
             <key>frames</key>
             <string>673.10,396.35,0.00,1.00000,1.00000,1.00,19,0.00,0.00</string>
+          </dict>
+          <key>btn_add</key>
+          <dict>
+            <key>class</key>
+            <string>a7</string>
+            <key>zIndex</key>
+            <integer>7</integer>
+            <key>frames</key>
+            <string>329.80,174.60,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
+          </dict>
+          <key>userbean</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>8</integer>
+            <key>frames</key>
+            <string>373.35,204.10,0.00,1.00000,1.00000,1.00,8,0.00,0.00,楷体-简 粗体,35,#FFFF00,left,149,53</string>
+            <key>text</key>
+            <string>2000</string>
+            <key>input</key>
+            <false/>
+          </dict>
+          <key>btn_caidan</key>
+          <dict>
+            <key>class</key>
+            <string>a64</string>
+            <key>zIndex</key>
+            <integer>10</integer>
+            <key>frames</key>
+            <string>748.25,1281.45,0.00,1.00000,1.00000,1.00,10,0.00,0.00</string>
           </dict>
         </dict>
       </dict>

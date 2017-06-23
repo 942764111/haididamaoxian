@@ -217,16 +217,7 @@
         <real>0.34151</real>
         <key>children</key>
         <dict>
-          <key>i13934</key>
-          <dict>
-            <key>class</key>
-            <string>aaa</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>293.45,864.70,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
-          </dict>
-          <key>i13942</key>
+          <key>i9125</key>
           <dict>
             <key>class</key>
             <string>a12</string>
@@ -235,16 +226,7 @@
             <key>frames</key>
             <string>299.00,364.50,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
           </dict>
-          <key>i13936</key>
-          <dict>
-            <key>class</key>
-            <string>a15</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>298.50,791.25,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
-          </dict>
-          <key>i13930</key>
+          <key>i9113</key>
           <dict>
             <key>class</key>
             <string>a19</string>
@@ -252,6 +234,15 @@
             <integer>0</integer>
             <key>frames</key>
             <string>299.50,856.40,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
+          </dict>
+          <key>i9119</key>
+          <dict>
+            <key>class</key>
+            <string>a15</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>298.50,791.25,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
           <key>img</key>
           <dict>
@@ -262,7 +253,16 @@
             <key>frames</key>
             <string>0.00,833.95,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
           </dict>
-          <key>i13938</key>
+          <key>i9117</key>
+          <dict>
+            <key>class</key>
+            <string>aaa</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>293.45,864.70,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
+          </dict>
+          <key>i9121</key>
           <dict>
             <key>class</key>
             <string>a16</string>
@@ -271,7 +271,7 @@
             <key>frames</key>
             <string>291.45,787.70,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
           </dict>
-          <key>i13940</key>
+          <key>i9123</key>
           <dict>
             <key>class</key>
             <string>a18</string>
