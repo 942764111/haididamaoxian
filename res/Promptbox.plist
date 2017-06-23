@@ -90,6 +90,17 @@
         <key>end</key>
         <integer>2</integer>
       </dict>
+      <key>a11</key>
+      <dict>
+        <key>type</key>
+        <string>png</string>
+        <key>anchorX</key>
+        <real>0.50000</real>
+        <key>anchorY</key>
+        <real>0.50000</real>
+        <key>url</key>
+        <string>Promptbox/a11.png</string>
+      </dict>
       <key>a4</key>
       <dict>
         <key>type</key>
@@ -149,7 +160,7 @@
             <key>zIndex</key>
             <integer>3</integer>
             <key>frames</key>
-            <string>328.95,63.55,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
+            <string>331.95,60.50,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
           </dict>
           <key>btn_qd</key>
           <dict>
@@ -177,6 +188,15 @@
             <integer>4</integer>
             <key>frames</key>
             <string>498.95,331.00,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+          </dict>
+          <key>qss</key>
+          <dict>
+            <key>class</key>
+            <string>a11</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>331.00,61.00,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
           </dict>
         </dict>
       </dict>

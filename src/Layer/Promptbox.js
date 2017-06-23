@@ -14,6 +14,8 @@
             parent: this,
             x: cc.winSize.width/2-35,
             y: cc.winSize.height/2+70});
+        this.Layer['qss'].setVisible(false);
+        this.Layer['btn_img'].setVisible(false);
         this.Layer.setAnchorPoint(0.5,0.5);
         flax.inputManager.addListener(this.Layer['btn_qd'],this.btns_Events,InputType.click,this);
         flax.inputManager.addListener(this.Layer['btn_remove'],this.btns_Events,InputType.click,this);
@@ -35,16 +37,30 @@
             X.releaseAllTime();
         }
 
-        if(parameters.btnsType==5){
-            this.Layer['btn_img'].x-=20;
-        }
+        //if(parameters.btnsType==5){
+        //    this.Layer['btn_img'].x-=20;
+        //}
 
-        X.DataMger.Getinstance({
-            'attributes':{
-                'txt':me.TXT,'img_btn_img':res_txtimg[GC.PROMPTBOX_BTNS[parameters.btnsType]]
-            },
-            'node':this.Layer
-        });
+
+        if(parameters.btnsType==5){
+            this.Layer['qss'].setVisible(true);
+            this.Layer['btn_img'].setVisible(false);
+            X.DataMger.Getinstance({
+                'attributes':{
+                    'txt':me.TXT
+                },
+                'node':this.Layer
+            });
+        }else{
+            this.Layer['qss'].setVisible(false);
+            this.Layer['btn_img'].setVisible(true);
+            X.DataMger.Getinstance({
+                'attributes':{
+                    'txt':me.TXT,'img_btn_img':res_txtimg[GC.PROMPTBOX_BTNS[parameters.btnsType]]
+                },
+                'node':this.Layer
+            });
+        }
 
         if(!this.isShowRemoveBtn){
             this.Layer['btn_remove'].setVisible(false);

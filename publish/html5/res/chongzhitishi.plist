@@ -140,14 +140,23 @@
         <real>1.00000</real>
         <key>children</key>
         <dict>
-          <key>i2821</key>
+          <key>confirmBtn</key>
           <dict>
             <key>class</key>
-            <string>a6</string>
+            <string>a5</string>
             <key>zIndex</key>
-            <integer>6</integer>
+            <integer>5</integer>
             <key>frames</key>
-            <string>186.95,59.55,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
+            <string>189.00,59.15,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
+          </dict>
+          <key>i9904</key>
+          <dict>
+            <key>class</key>
+            <string>a7</string>
+            <key>zIndex</key>
+            <integer>7</integer>
+            <key>frames</key>
+            <string>466.95,59.05,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
           </dict>
           <key>img</key>
           <dict>
@@ -158,45 +167,14 @@
             <key>frames</key>
             <string>62.95,330.00,0.00,0.89194,0.45267,1.00,0,0.00,0.00</string>
           </dict>
-          <key>confirmBtn</key>
+          <key>i9902</key>
           <dict>
             <key>class</key>
-            <string>a5</string>
+            <string>a6</string>
             <key>zIndex</key>
-            <integer>5</integer>
+            <integer>6</integer>
             <key>frames</key>
-            <string>189.00,59.15,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
-          </dict>
-          <key>i2823</key>
-          <dict>
-            <key>class</key>
-            <string>a7</string>
-            <key>zIndex</key>
-            <integer>7</integer>
-            <key>frames</key>
-            <string>466.95,59.05,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
-          </dict>
-          <key>qiantxt</key>
-          <dict>
-            <key>class</key>
-            <string>null</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>62.95,186.50,0.00,1.00000,1.00000,1.00,3,0.00,0.00,Arial Black,30,#ECE4FF,center,487,47</string>
-            <key>text</key>
-            <string/>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>beanimg</key>
-          <dict>
-            <key>class</key>
-            <string>a4</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>97.00,214.00,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+            <string>186.95,59.55,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
           </dict>
           <key>beantxt</key>
           <dict>
@@ -211,6 +189,19 @@
             <key>input</key>
             <false/>
           </dict>
+          <key>qiantxt</key>
+          <dict>
+            <key>class</key>
+            <string>null</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>62.95,186.50,0.00,1.00000,1.00000,1.00,3,0.00,0.00,Arial Black,30,#ECE4FF,center,487,47</string>
+            <key>text</key>
+            <string/>
+            <key>input</key>
+            <false/>
+          </dict>
           <key>cancelBtn</key>
           <dict>
             <key>class</key>
@@ -219,6 +210,15 @@
             <integer>1</integer>
             <key>frames</key>
             <string>463.95,59.15,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
+          </dict>
+          <key>beanimg</key>
+          <dict>
+            <key>class</key>
+            <string>a4</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>97.00,214.00,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
         </dict>
       </dict>

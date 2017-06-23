@@ -27,6 +27,7 @@ var res = {
     animation_png:'res/animation.png',
     animation:'res/animation.plist',
     sximg:'res/Promptbox/a6.png',
+    qssimg:'res/Promptbox/a11.png',
     mrfl:'res/mrfl.json',
     mrflitem:'res/mrflitem.json',
     gljdz:'res/gljdz.json',
@@ -183,6 +184,7 @@ var res_GameBegin = [
     res.animation_png,
     res.animation,
     res.sximg,
+    res.qssimg,
     res.gljdz,
 ];
 
