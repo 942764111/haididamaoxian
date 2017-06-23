@@ -5,7 +5,7 @@
       <key>GameBegin_0000</key>
       <dict>
         <key>frame</key>
-        <string>{{427,485},{137,157}}</string>
+        <string>{{427,509},{137,157}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -14,7 +14,7 @@
       <key>GameBegin_0001</key>
       <dict>
         <key>frame</key>
-        <string>{{427,951},{125,119}}</string>
+        <string>{{486,975},{125,119}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -23,7 +23,7 @@
       <key>GameBegin_0002</key>
       <dict>
         <key>frame</key>
-        <string>{{427,802},{135,147}}</string>
+        <string>{{427,826},{135,147}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -32,25 +32,25 @@
       <key>GameBegin_0003</key>
       <dict>
         <key>frame</key>
-        <string>{{427,303},{206,180}}</string>
+        <string>{{245,1083},{239,209}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
-        <string>{206.00,180.00}</string>
+        <string>{239.00,209.00}</string>
       </dict>
       <key>GameBegin_0004</key>
       <dict>
         <key>frame</key>
-        <string>{{1,1083},{282,244}}</string>
+        <string>{{427,1},{237,204}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
-        <string>{282.00,244.00}</string>
+        <string>{237.00,204.00}</string>
       </dict>
       <key>GameBegin_0005</key>
       <dict>
         <key>frame</key>
-        <string>{{427,644},{136,156}}</string>
+        <string>{{427,668},{136,156}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -59,7 +59,7 @@
       <key>GameBegin_0006</key>
       <dict>
         <key>frame</key>
-        <string>{{494,1072},{63,54}}</string>
+        <string>{{478,1294},{63,54}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -68,7 +68,7 @@
       <key>GameBegin_0007</key>
       <dict>
         <key>frame</key>
-        <string>{{1,1329},{164,33}}</string>
+        <string>{{1,1294},{164,33}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -77,16 +77,16 @@
       <key>GameBegin_0008</key>
       <dict>
         <key>frame</key>
-        <string>{{285,1083},{207,174}}</string>
+        <string>{{1,1083},{242,204}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
-        <string>{207.00,174.00}</string>
+        <string>{242.00,204.00}</string>
       </dict>
       <key>GameBegin_0009</key>
       <dict>
         <key>frame</key>
-        <string>{{330,1329},{153,33}}</string>
+        <string>{{323,1294},{153,33}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -95,7 +95,7 @@
       <key>GameBegin_0010</key>
       <dict>
         <key>frame</key>
-        <string>{{167,1329},{161,33}}</string>
+        <string>{{1,1329},{161,33}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -104,7 +104,7 @@
       <key>GameBegin_0011</key>
       <dict>
         <key>frame</key>
-        <string>{{285,1259},{161,33}}</string>
+        <string>{{164,1329},{161,33}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -113,7 +113,7 @@
       <key>GameBegin_0012</key>
       <dict>
         <key>frame</key>
-        <string>{{285,1294},{154,33}}</string>
+        <string>{{167,1294},{154,33}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -122,7 +122,7 @@
       <key>GameBegin_0013</key>
       <dict>
         <key>frame</key>
-        <string>{{482,1259},{24,25}}</string>
+        <string>{{427,1006},{24,25}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -131,7 +131,7 @@
       <key>GameBegin_0014</key>
       <dict>
         <key>frame</key>
-        <string>{{427,1},{220,300}}</string>
+        <string>{{427,207},{220,300}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -140,7 +140,7 @@
       <key>GameBegin_0015</key>
       <dict>
         <key>frame</key>
-        <string>{{448,1259},{32,29}}</string>
+        <string>{{427,975},{32,29}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -158,7 +158,7 @@
       <key>GameBegin_0017</key>
       <dict>
         <key>frame</key>
-        <string>{{441,1294},{121,33}}</string>
+        <string>{{327,1329},{121,33}}</string>
         <key>offset</key>
         <string>{0.00,0.00}</string>
         <key>sourceSize</key>
@@ -230,9 +230,9 @@
         <key>type</key>
         <string>button</string>
         <key>anchorX</key>
-        <real>0.50485</real>
+        <real>0.42259</real>
         <key>anchorY</key>
-        <real>0.51111</real>
+        <real>0.55502</real>
         <key>start</key>
         <integer>3</integer>
         <key>end</key>
@@ -243,9 +243,9 @@
         <key>type</key>
         <string>button</string>
         <key>anchorX</key>
-        <real>0.50177</real>
+        <real>0.58017</real>
         <key>anchorY</key>
-        <real>0.50410</real>
+        <real>0.40686</real>
         <key>start</key>
         <integer>4</integer>
         <key>end</key>
@@ -295,9 +295,9 @@
         <key>type</key>
         <string>button</string>
         <key>anchorX</key>
-        <real>0.50725</real>
+        <real>0.42149</real>
         <key>anchorY</key>
-        <real>0.53448</real>
+        <real>0.55882</real>
         <key>start</key>
         <integer>8</integer>
         <key>end</key>
@@ -490,82 +490,6 @@
         <real>0.50079</real>
         <key>children</key>
         <dict>
-          <key>btn_fh</key>
-          <dict>
-            <key>class</key>
-            <string>a3</string>
-            <key>zIndex</key>
-            <integer>3</integer>
-            <key>frames</key>
-            <string>732.60,1262.30,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
-          </dict>
-          <key>btn_gsc</key>
-          <dict>
-            <key>class</key>
-            <string>a4</string>
-            <key>zIndex</key>
-            <integer>4</integer>
-            <key>frames</key>
-            <string>690.10,164.40,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
-          </dict>
-          <key>btn_jjc</key>
-          <dict>
-            <key>class</key>
-            <string>a5</string>
-            <key>zIndex</key>
-            <integer>5</integer>
-            <key>frames</key>
-            <string>420.10,164.40,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
-          </dict>
-          <key>userimg</key>
-          <dict>
-            <key>class</key>
-            <string>a30</string>
-            <key>zIndex</key>
-            <integer>11</integer>
-            <key>frames</key>
-            <string>56.50,1197.50,0.00,1.01051,1.01132,1.00,11,0.00,0.00</string>
-          </dict>
-          <key>userbean</key>
-          <dict>
-            <key>class</key>
-            <string>num</string>
-            <key>zIndex</key>
-            <integer>10</integer>
-            <key>frames</key>
-            <string>243.65,1253.50,0.00,1.00000,1.00000,1.00,10,0.00,0.00,楷体-简 粗体,35,#FFFFFF,left,347,53</string>
-            <key>text</key>
-            <string>0</string>
-            <key>input</key>
-            <false/>
-          </dict>
-          <key>btn_sz</key>
-          <dict>
-            <key>class</key>
-            <string>a33</string>
-            <key>zIndex</key>
-            <integer>13</integer>
-            <key>frames</key>
-            <string>732.60,684.55,0.00,1.00000,1.00000,1.00,13,0.00,0.00</string>
-          </dict>
-          <key>btn_th</key>
-          <dict>
-            <key>class</key>
-            <string>a2</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>732.60,1080.10,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
-          </dict>
-          <key>btn_mrfl</key>
-          <dict>
-            <key>class</key>
-            <string>a6</string>
-            <key>zIndex</key>
-            <integer>6</integer>
-            <key>frames</key>
-            <string>732.60,884.15,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
-          </dict>
           <key>btn_xsc</key>
           <dict>
             <key>class</key>
@@ -573,7 +497,7 @@
             <key>zIndex</key>
             <integer>8</integer>
             <key>frames</key>
-            <string>149.25,164.40,0.00,1.00000,1.00000,1.00,8,0.00,0.00</string>
+            <string>163.80,140.40,0.00,1.00000,1.00000,1.00,8,0.00,0.00</string>
           </dict>
           <key>adimn</key>
           <dict>
@@ -611,6 +535,82 @@
             <key>frames</key>
             <string>425.00,667.00,0.00,1.13332,1.00000,1.00,0,0.00,0.00</string>
           </dict>
+          <key>btn_bean</key>
+          <dict>
+            <key>class</key>
+            <string>a7</string>
+            <key>zIndex</key>
+            <integer>7</integer>
+            <key>frames</key>
+            <string>211.15,1226.00,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
+          </dict>
+          <key>btn_sz</key>
+          <dict>
+            <key>class</key>
+            <string>a33</string>
+            <key>zIndex</key>
+            <integer>13</integer>
+            <key>frames</key>
+            <string>732.60,684.55,0.00,1.00000,1.00000,1.00,13,0.00,0.00</string>
+          </dict>
+          <key>btn_fh</key>
+          <dict>
+            <key>class</key>
+            <string>a3</string>
+            <key>zIndex</key>
+            <integer>3</integer>
+            <key>frames</key>
+            <string>732.60,1262.30,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
+          </dict>
+          <key>btn_gsc</key>
+          <dict>
+            <key>class</key>
+            <string>a4</string>
+            <key>zIndex</key>
+            <integer>4</integer>
+            <key>frames</key>
+            <string>654.20,143.60,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+          </dict>
+          <key>btn_jjc</key>
+          <dict>
+            <key>class</key>
+            <string>a5</string>
+            <key>zIndex</key>
+            <integer>5</integer>
+            <key>frames</key>
+            <string>448.10,114.20,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
+          </dict>
+          <key>userimg</key>
+          <dict>
+            <key>class</key>
+            <string>a30</string>
+            <key>zIndex</key>
+            <integer>11</integer>
+            <key>frames</key>
+            <string>56.50,1197.50,0.00,1.01051,1.01132,1.00,11,0.00,0.00</string>
+          </dict>
+          <key>btn_mrfl</key>
+          <dict>
+            <key>class</key>
+            <string>a6</string>
+            <key>zIndex</key>
+            <integer>6</integer>
+            <key>frames</key>
+            <string>732.60,884.15,0.00,1.00000,1.00000,1.00,6,0.00,0.00</string>
+          </dict>
+          <key>userbean</key>
+          <dict>
+            <key>class</key>
+            <string>num</string>
+            <key>zIndex</key>
+            <integer>10</integer>
+            <key>frames</key>
+            <string>243.65,1253.50,0.00,1.00000,1.00000,1.00,10,0.00,0.00,楷体-简 粗体,35,#FFFFFF,left,347,53</string>
+            <key>text</key>
+            <string>0</string>
+            <key>input</key>
+            <false/>
+          </dict>
           <key>username</key>
           <dict>
             <key>class</key>
@@ -624,14 +624,14 @@
             <key>input</key>
             <false/>
           </dict>
-          <key>btn_bean</key>
+          <key>btn_th</key>
           <dict>
             <key>class</key>
-            <string>a7</string>
+            <string>a2</string>
             <key>zIndex</key>
-            <integer>7</integer>
+            <integer>2</integer>
             <key>frames</key>
-            <string>211.15,1226.00,0.00,1.00000,1.00000,1.00,7,0.00,0.00</string>
+            <string>732.60,1080.10,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
@@ -649,25 +649,7 @@
         <real>0.50000</real>
         <key>children</key>
         <dict>
-          <key>i761948</key>
-          <dict>
-            <key>class</key>
-            <string>a76</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null||||||||||||||||||245.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|||</string>
-          </dict>
-          <key>i761944</key>
-          <dict>
-            <key>class</key>
-            <string>a76</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null|||||||245.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|||||||||null|||||</string>
-          </dict>
-          <key>i761942</key>
+          <key>i1777</key>
           <dict>
             <key>class</key>
             <string>a78</string>
@@ -676,7 +658,7 @@
             <key>frames</key>
             <string>null||||||225.50,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|null||||||||||||||</string>
           </dict>
-          <key>i761731</key>
+          <key>i1566</key>
           <dict>
             <key>class</key>
             <string>a74</string>
@@ -685,7 +667,25 @@
             <key>frames</key>
             <string>0.00,1080.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00||||||null|||||||||||||||</string>
           </dict>
-          <key>i761946</key>
+          <key>i1783</key>
+          <dict>
+            <key>class</key>
+            <string>a76</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||||||||||||||||245.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|||</string>
+          </dict>
+          <key>i1779</key>
+          <dict>
+            <key>class</key>
+            <string>a76</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null|||||||245.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|||||||||null|||||</string>
+          </dict>
+          <key>i1781</key>
           <dict>
             <key>class</key>
             <string>a77</string>
@@ -710,15 +710,6 @@
         <real>0.75333</real>
         <key>children</key>
         <dict>
-          <key>yxsx_btn</key>
-          <dict>
-            <key>class</key>
-            <string>yxsx_btn2</string>
-            <key>zIndex</key>
-            <integer>2</integer>
-            <key>frames</key>
-            <string>32.00,75.05,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
-          </dict>
           <key>yxwf_btn</key>
           <dict>
             <key>class</key>
@@ -727,6 +718,15 @@
             <integer>1</integer>
             <key>frames</key>
             <string>32.00,248.50,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
+          </dict>
+          <key>i1592</key>
+          <dict>
+            <key>class</key>
+            <string>a66</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>0.00,300.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
           </dict>
           <key>tzjl_btn</key>
           <dict>
@@ -737,15 +737,6 @@
             <key>frames</key>
             <string>32.00,163.50,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
-          <key>i761757</key>
-          <dict>
-            <key>class</key>
-            <string>a66</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>0.00,300.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00</string>
-          </dict>
           <key>yxsx_btn2</key>
           <dict>
             <key>class</key>
@@ -754,6 +745,15 @@
             <integer>3</integer>
             <key>frames</key>
             <string>112.00,26.55,0.00,1.00000,1.00000,1.00,3,0.00,0.00</string>
+          </dict>
+          <key>yxsx_btn</key>
+          <dict>
+            <key>class</key>
+            <string>yxsx_btn2</string>
+            <key>zIndex</key>
+            <integer>2</integer>
+            <key>frames</key>
+            <string>32.00,75.05,0.00,1.00000,1.00000,1.00,2,0.00,0.00</string>
           </dict>
         </dict>
       </dict>
