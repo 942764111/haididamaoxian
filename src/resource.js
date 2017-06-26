@@ -54,7 +54,9 @@ var res_IMG = {
     cz_5:'res/GameMove/IMG/chongzhi_5.png',
     btimg:'res/GameMove/IMG/btimg.png',
     tck:'res/GameMove/IMG/tck.png',
-    WQBJ:'res/GameMove/IMG/WQBJ.png'
+    WQBJ:'res/GameMove/IMG/WQBJ.png',
+    titleimg2:'res/GameMove/IMG/titleimg2.png',
+    xin:'res/GameMove/IMG/xin.png'
 }
 var res_Button = {
     button_1:'res/GameMove/IMG/anniu.png',
@@ -185,7 +187,7 @@ var res_GameBegin = [
     res.animation,
     res.sximg,
     res.qssimg,
-    res.gljdz,
+    res.gljdz
 ];
 
 var res_GameMove = [

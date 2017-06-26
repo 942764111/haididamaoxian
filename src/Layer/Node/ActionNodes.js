@@ -1,6 +1,4 @@
-/**
- * Created by YanJun on 9/12/14.
- */
+
 (function(){
     var _ActionNodes = cc.Class.extend({
         Node    :   null,
@@ -105,6 +103,39 @@
                 obj[0].runAction(cc.sequence(cc.show(),orbitBack,cc.hide(),
                     cc.targetedAction(obj[1],cc.sequence(cc.show(),orbitFront)),cc.callFunc(callback & callback())));
             }
+        },
+        /**
+         * 界面中光环和星星的动画
+         * @param halo
+         */
+        haloAndStarAnimation : function(haloobj,Starobjs){
+            var me = this.Node;
+            haloobj.runAction(cc.repeatForever(cc.rotateBy(3,360)));
+
+            function StarobjVisible(){
+                for(var j=0;j<Starobjs.length;j++){
+                    Starobjs[j].setVisible(false);
+                }
+            }
+            var Starob = null,readnum=null;
+
+            StarobjVisible();
+            me.schedule(function(){
+              //  StarobjVisible();
+                if(Starobjs.length>=4){
+                    readnum = Math.floor(Math.random()*4);
+                }else{
+                    readnum = Math.floor(Math.random()*Starobjs.length);
+                }
+                for(var i=0;i<readnum;i++){
+                    Starob = Starobjs[Math.floor(Math.random()*Starobjs.length)];
+                    Starob.setVisible(true);
+                    if(Starob){
+                        Starob.runAction(cc.sequence(cc.fadeIn(1),cc.fadeOut(1)));
+                    }
+                }
+            },0.3)
+
         },
         onExit:function() {
             this.Node = null;

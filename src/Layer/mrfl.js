@@ -8,6 +8,17 @@
             json.setAnchorPoint(0.5,0.5);
             json.setPosition(cc.winSize.width/2,cc.winSize.height/2);
             this.addChild(json);
+
+            //顶部动画
+            var Stars = [],starobj = null;
+            for(var i=1;i<=22;i++){
+                starobj = ccui.helper.seekWidgetByName(json, "xin_"+i);
+                Stars.push(starobj);
+            }
+            //Image_9
+            var halo =  ccui.helper.seekWidgetByName(json, "Image_9");
+            X.ActionNodes.Getinstance(this).haloAndStarAnimation(halo,Stars);
+
             var List = ccui.helper.seekWidgetByName(json, "ListView");
 
             GC.TASK[1]['iscomplete'] = GC.USER_DATA.DATA['issign'];
@@ -133,7 +144,11 @@
                 default:
                     break;
             }
+        },
+        uiAnimatio : function(){
+
         }
+
     });
 
     X.GamePromptbox={

@@ -12,7 +12,14 @@ var chongzhi= cc.Layer.extend({
 
         flax.inputManager.addListener(Layer['btn'],this.btns_Events,InputType.click,this);
 
-        this.inititem(Layer);
+        var Stars = [],starobj = null;
+        for(var i=1;i<=13;i++){
+            starobj = Layer['xin_'+i]
+            Stars.push(starobj);
+        }
+        X.ActionNodes.Getinstance(this).haloAndStarAnimation(Layer['halo'],Stars);
+
+      //  this.inititem(Layer);
     },
     initTouch : function(){
         this.addChild(new pointTouchLayer());
