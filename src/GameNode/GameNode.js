@@ -136,13 +136,21 @@ var X = {};
         }
     }
 
+    /**
+     * 格式化 游戏中的时间
+     * @param fmt
+     * @returns {string|*}
+     * @constructor
+     */
     X.FormatDate = function(fmt){
-        var date;
-        date=fmt.substring(0,4)+'年';
+        var date = "暂无数据";
+        if(fmt != undefined&&fmt&&fmt.trim()!=""&&fmt.length==8){
+            date=fmt.substring(0,4)+'年';
 
-        date+=fmt.substring(4,6)+'月';
+            date+=fmt.substring(4,6)+'月';
 
-        date+=fmt.substring(6,8)+'日';
+            date+=fmt.substring(6,8)+'日';
+        }
         return date;
     }
 })();
