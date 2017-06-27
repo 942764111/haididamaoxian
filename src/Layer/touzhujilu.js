@@ -59,17 +59,17 @@
         list.removeAllItems();
 
         var i= 0,me = this;
-        for(i=0;i<5;i++){
+        for(i=0;i<8;i++){
             pushItem();
         }
-        if(i==5){
+        if(i==8){
             me.schedule(function(){
                 if(i==DATA.length-1){
                     me.unscheduleAllCallbacks();
                 }
                 pushItem();
                 i++;
-            },0.1);
+            },0.01);
         }
 
         function pushItem(){
