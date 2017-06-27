@@ -109,33 +109,34 @@
          * @param halo
          */
         haloAndStarAnimation : function(haloobj,Starobjs){
-            var me = this.Node;
-            haloobj.runAction(cc.repeatForever(cc.rotateBy(3,360)));
+            if(haloobj&&Starobjs){
+                var me = this.Node;
+                haloobj.runAction(cc.repeatForever(cc.rotateBy(3,360)));
 
-            function StarobjVisible(){
-                for(var j=0;j<Starobjs.length;j++){
-                    Starobjs[j].setVisible(false);
-                }
-            }
-            var Starob = null,readnum=null;
-
-            StarobjVisible();
-            me.schedule(function(){
-              //  StarobjVisible();
-                if(Starobjs.length>=4){
-                    readnum = Math.floor(Math.random()*4);
-                }else{
-                    readnum = Math.floor(Math.random()*Starobjs.length);
-                }
-                for(var i=0;i<readnum;i++){
-                    Starob = Starobjs[Math.floor(Math.random()*Starobjs.length)];
-                    Starob.setVisible(true);
-                    if(Starob){
-                        Starob.runAction(cc.sequence(cc.fadeIn(1),cc.fadeOut(1)));
+                function StarobjVisible(){
+                    for(var j=0;j<Starobjs.length;j++){
+                        Starobjs[j].setVisible(false);
                     }
                 }
-            },0.3)
+                var Starob = null,readnum=null;
 
+                StarobjVisible();
+                me.schedule(function(){
+                    //  StarobjVisible();
+                    if(Starobjs.length>=4){
+                        readnum = Math.floor(Math.random()*4);
+                    }else{
+                        readnum = Math.floor(Math.random()*Starobjs.length);
+                    }
+                    for(var i=0;i<readnum;i++){
+                        Starob = Starobjs[Math.floor(Math.random()*Starobjs.length)];
+                        Starob.setVisible(true);
+                        if(Starob){
+                            Starob.runAction(cc.sequence(cc.fadeIn(1),cc.fadeOut(1)));
+                        }
+                    }
+                },0.3)
+            }
         },
         onExit:function() {
             this.Node = null;

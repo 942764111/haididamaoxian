@@ -27,12 +27,14 @@
         runGame : function() {
             var me = this.me;
             var sizeindex = 1;
+            var readTime = Math.floor(Math.random()*1000+1500);
             var time = setInterval(function(){
+                readTime = Math.floor(Math.random()*1000+1500);
                 if(me.isGameOver){
                     clearTimeout(time);
                 }
                 rouletteMethod();
-            },500);
+            },readTime);
             this.TimeEvents.push(time);
             function rouletteMethod(){
                 sizeindex++;
