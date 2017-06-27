@@ -497,7 +497,7 @@
             <key>zIndex</key>
             <integer>5</integer>
             <key>frames</key>
-            <string>448.10,110.80,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
+            <string>448.10,112.80,0.00,1.00000,1.00000,1.00,5,0.00,0.00</string>
           </dict>
           <key>userimg</key>
           <dict>
@@ -524,7 +524,7 @@
             <key>zIndex</key>
             <integer>4</integer>
             <key>frames</key>
-            <string>700.60,143.60,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
+            <string>700.60,140.40,0.00,1.00000,1.00000,1.00,4,0.00,0.00</string>
           </dict>
           <key>btn_sz</key>
           <dict>
@@ -649,16 +649,7 @@
         <real>0.50000</real>
         <key>children</key>
         <dict>
-          <key>i1803</key>
-          <dict>
-            <key>class</key>
-            <string>a76</string>
-            <key>zIndex</key>
-            <integer>0</integer>
-            <key>frames</key>
-            <string>null|||||||245.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|||||||||null|||||</string>
-          </dict>
-          <key>i1807</key>
+          <key>i1781</key>
           <dict>
             <key>class</key>
             <string>a76</string>
@@ -667,16 +658,25 @@
             <key>frames</key>
             <string>null||||||||||||||||||245.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|||</string>
           </dict>
-          <key>i1801</key>
+          <key>i1777</key>
           <dict>
             <key>class</key>
-            <string>a78</string>
+            <string>a76</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||||225.50,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|null||||||||||||||</string>
+            <string>null|||||||245.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|||||||||null|||||</string>
           </dict>
-          <key>i1590</key>
+          <key>i1779</key>
+          <dict>
+            <key>class</key>
+            <string>a77</string>
+            <key>zIndex</key>
+            <integer>0</integer>
+            <key>frames</key>
+            <string>null||||||||||||||||212.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00||null|||</string>
+          </dict>
+          <key>i1564</key>
           <dict>
             <key>class</key>
             <string>a74</string>
@@ -685,14 +685,14 @@
             <key>frames</key>
             <string>0.00,1080.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00||||||null|||||||||||||||</string>
           </dict>
-          <key>i1805</key>
+          <key>i1775</key>
           <dict>
             <key>class</key>
-            <string>a77</string>
+            <string>a78</string>
             <key>zIndex</key>
             <integer>0</integer>
             <key>frames</key>
-            <string>null||||||||||||||||212.00,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00||null|||</string>
+            <string>null||||||225.50,540.00,0.00,1.00000,1.00000,1.00,0,0.00,0.00|null||||||||||||||</string>
           </dict>
         </dict>
       </dict>
@@ -737,7 +737,7 @@
             <key>frames</key>
             <string>32.00,248.50,0.00,1.00000,1.00000,1.00,1,0.00,0.00</string>
           </dict>
-          <key>i1616</key>
+          <key>i1590</key>
           <dict>
             <key>class</key>
             <string>a66</string>

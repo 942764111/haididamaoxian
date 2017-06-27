@@ -109,8 +109,6 @@ var X = {};
         GC.SCENE.id = null;
         GC.SCENE.layer = null;
         X.releaseAllTime();
-        delete GC;
-
         self.location=GC.HTTPDATA.qulebuybacktopay;
     }
     X.Gotopup = function(){

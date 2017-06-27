@@ -109,13 +109,16 @@
          * @param halo
          */
         haloAndStarAnimation : function(haloobj,Starobjs){
-            if(haloobj&&Starobjs){
-                var me = this.Node;
-                haloobj.runAction(cc.repeatForever(cc.rotateBy(3,360)));
-
+            var me = this.Node;
+            if(haloobj) {
+                haloobj.runAction(cc.repeatForever(cc.rotateBy(3, 360)));
+            }
+            if(Starobjs){
                 function StarobjVisible(){
                     for(var j=0;j<Starobjs.length;j++){
-                        Starobjs[j].setVisible(false);
+                        if(Starobjs[j]){
+                            Starobjs[j].setVisible(false);
+                        }
                     }
                 }
                 var Starob = null,readnum=null;
@@ -130,12 +133,12 @@
                     }
                     for(var i=0;i<readnum;i++){
                         Starob = Starobjs[Math.floor(Math.random()*Starobjs.length)];
-                        Starob.setVisible(true);
                         if(Starob){
+                            Starob.setVisible(true);
                             Starob.runAction(cc.sequence(cc.fadeIn(1),cc.fadeOut(1)));
                         }
                     }
-                },0.3)
+                },0.2)
             }
         },
         onExit:function() {

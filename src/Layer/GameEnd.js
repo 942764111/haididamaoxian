@@ -15,6 +15,12 @@
                 y: cc.winSize.height/2
             });
 
+            var Stars = [],starobj = null;
+            for(var i=1;i<=23;i++){
+                starobj = MoveLayer['xin_'+i];
+                Stars.push(starobj);
+            }
+            X.ActionNodes.Getinstance(this).haloAndStarAnimation(MoveLayer['halo'],Stars);
             this.time = GC.USER_DATA.DATA['remain_seconds'] - GC.USER_DATA.DATA['remain_buy_seconds'];
 
             var xipaiat = flax.assetsManager.createDisplay(res.animation, "xipai", {
