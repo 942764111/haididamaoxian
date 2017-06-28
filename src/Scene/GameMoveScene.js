@@ -49,7 +49,7 @@ var GameMoveScene = cc.Scene.extend({
                 break;
             case 'replay':
                 me.GAMESTATE = State;
-
+                X.tip_NB.show(LNG.REPLAY);
                 this.initGameData();
 
                 me.btn_fallbackMethods(true);
@@ -700,6 +700,7 @@ var GameMoveScene = cc.Scene.extend({
                             'node': me.Layer
                         });
                         if(barindex==2){//等待开奖中
+                            X.tip_NB.show(LNG.TZXZ);
                             me.islock = true;
                             X.AINodes.Getinstance().releasethreads();
                         }
@@ -718,6 +719,7 @@ var GameMoveScene = cc.Scene.extend({
 
                                 }
                                 if (barindex == 2) {//等待开奖中
+                                    X.tip_NB.show(LNG.TZXZ);
                                     me.islock = true;
                                     X.AINodes.Getinstance().releasethreads();
                                 }

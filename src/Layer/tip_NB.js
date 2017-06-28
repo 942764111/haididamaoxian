@@ -1,6 +1,4 @@
-/**
- * Created by YanJun on 9/5/14.
- */
+
 (function(){
     var tip_NB = cc.Class.extend({
         str     :   null,
@@ -32,8 +30,10 @@
 
             var time = setTimeout(function(){
                     clearTimeout(time);
-                    img.removeFromParent();
-                    X.tip_NB._instance = null;
+                    if(img.txt){
+                        img.txt.runAction(cc.sequence(cc.fadeOut(1.5)));
+                    }
+                    img.runAction(cc.sequence(cc.fadeOut(1.5),new cc.callFunc(function(){this.removeFromParent();},img)));
 
                     if(btn) {
                         img.btn.setMouseEnabled(true);
