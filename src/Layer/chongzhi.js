@@ -19,7 +19,7 @@ var chongzhi= cc.Layer.extend({
         }
         X.ActionNodes.Getinstance(this).haloAndStarAnimation(Layer['halo'],Stars);
 
-      //  this.inititem(Layer);
+        this.inititem(Layer);
     },
     initTouch : function(){
         this.addChild(new pointTouchLayer());

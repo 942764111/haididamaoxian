@@ -31,10 +31,9 @@
             xipaiat.autoStopWhenOver = true;
             xipaiat.play();
 
-
-            setTimeout(function(){
+            me.scheduleOnce(function(){
                 Draw();
-            },5000);
+            },5);
 
             function Draw(){
                 var PCobj;
@@ -67,8 +66,42 @@
                 acarrs.push(beipai);
                 acarrs.push(obj);
                     X.ActionNodes.Getinstance().FlipCARDS(acarrs,function(){
+                        var winRouletteids = [];//用户最终赢得轮盘id;
+                        me.scheduleOnce(function(){
+                            var recordobj = null;
+                            /**
+                             * state 0:输  1:赢   2:本次未参与
+                             * @returns {number}
+                             */
+                            function iswin(){
+                                var state = 0;
+                                if(GC.TOUZHU_RECORD.length<1){
+                                    return 2;
+                                }
+                                for(var i = 0;i<GC.TOUZHU_RECORD.length;i++){
+                                    recordobj = GC.TOUZHU_RECORD[i];
+                                    for(var a in recordobj){
+                                        if(recordobj[a]&&(data[a]+'')==recordobj[a]){
+                                            state = 1;
+                                            winRouletteids.push(recordobj);
+                                        }
+                                    }
+                                }
+                                return state;
+                            }
 
-                       setTimeout(function(){
+                            if(iswin()==1){
+                                X.AudioManage.Getinstance().playEffect(res_music.win2);
+                                X.AudioManage.Getinstance().ispauseMusic(false);
+                            }else if(iswin()==0){
+                                //X.AudioManage.Getinstance().playEffect(res_music.failure);
+                                //X.AudioManage.Getinstance().ispauseMusic(false);
+                            }
+                        },1)
+
+
+                        me.scheduleOnce(function(){
+                            X.AudioManage.Getinstance().ispauseMusic(true);
                             me.removeFromParent();
                             X.GameEnd._instance = null;
                             if(GC.SCENE['id']=='GameMoveScene'){
@@ -77,16 +110,11 @@
                                     'style':data['style'],
                                     'big':data['big'],
                                     'points':data['points'],
-                                    'tempdata':data['tempdata']
+                                    'tempdata':data['tempdata'],
+                                    'winRouletteids':winRouletteids
                                 });
-                                var time2 = setTimeout(function(){
-                                    GC.SCENE['node'].GameState('replay');
-                                },5000)
-                                me.TimeEvents.push(time2);
                             }
-                        },5000);
-
-
+                        },4)
                     });
             }
 

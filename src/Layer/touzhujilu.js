@@ -112,6 +112,7 @@
             case ccui.Widget.TOUCH_MOVED:
                 break;
             case ccui.Widget.TOUCH_ENDED:
+                X.GameBtnEffect();
                 getHTTPSData();
                 break;
             case ccui.Widget.TOUCH_CANCELED:
@@ -274,6 +275,7 @@
             case ccui.Widget.TOUCH_MOVED:
                 break;
             case ccui.Widget.TOUCH_ENDED:
+                X.GameBtnEffect();
                 if(me.isEvent){
                     this.removeFromParent();
                     X.touzhujilu._instance = null;

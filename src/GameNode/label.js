@@ -38,5 +38,6 @@ var LNG={
     TZJE:'投注{1}',
     WZJ:'未中奖',
     TZXZ:'停止下注',
-    REPLAY:'新一轮投注开始'
+    REPLAY:'新一轮投注开始',
+    ZWSJ:'暂无数据'
 };

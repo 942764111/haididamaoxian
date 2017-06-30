@@ -331,6 +331,7 @@
                 <file name="src/GameNode/label.js"/>
                 <file name="src/GameNode/DataManage.js"/>
                 <file name="src/GameNode/bRichText.js"/>
+                <file name="src/GameNode/AudioManage.js"/>
                 <file name="src/Scene/GameBeginScene.js"/>
                 <file name="src/Scene/GameMoveScene.js"/>
                 <file name="src/Scene/GameEndScene.js"/>
@@ -346,7 +347,6 @@
                 <file name="src/Layer/touzhujilu.js"/>
                 <file name="src/Layer/caidanBtn.js"/>
                 <file name="src/Layer/shezhi.js"/>
-                <file name="src/Layer/gulijindaozhang.js"/>
                 <file name="src/Layer/promptBox/activity.js"/>
                 <file name="src/Layer/Node/ActionNodes.js"/>
                 <file name="src/Layer/Node/AINodes.js"/>

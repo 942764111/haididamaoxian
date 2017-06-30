@@ -42,6 +42,7 @@
                 case ccui.Widget.TOUCH_MOVED:
                     break;
                 case ccui.Widget.TOUCH_ENDED:
+                    X.GameBtnEffect();
                     if(this.callback){
                         this.callback & this.callback();
                     }

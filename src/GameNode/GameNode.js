@@ -92,6 +92,16 @@ var X = {};
         X.AINodes.Getinstance().releasethreads();
     }
 
+    /**
+     * 释放数组对象
+     */
+    X.releaseAlls = function(arrs){
+        if(arrs){
+            for(var i=0;i<arrs.length;i){
+                arrs.splice(i,1);
+            }
+        }
+    }
 
     X.releaseSceneNodes = function(){
         GC.SCENE['node'].removeAllChildren();
@@ -103,6 +113,7 @@ var X = {};
     }
 
     X.closeWebPage = function(){
+        cc.audioEngine.end();
         cc.audioEngine.stopMusic(true);
         X.releaseSceneNodes();
         GC.SCENE.node = null;
@@ -141,7 +152,7 @@ var X = {};
      * @constructor
      */
     X.FormatDate = function(fmt){
-        var date = "暂无数据";
+        var date = LNG.ZWSJ;
         if(fmt != undefined&&fmt&&fmt.trim()!=""&&fmt.length==8){
             date=fmt.substring(0,4)+'年';
 
@@ -150,6 +161,9 @@ var X = {};
             date+=fmt.substring(6,8)+'日';
         }
         return date;
+    },
+    X.GameBtnEffect  = function(){
+        X.AudioManage.Getinstance().playEffect(res_music.btn2);
     }
 })();
 

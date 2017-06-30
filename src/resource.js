@@ -75,7 +75,14 @@ var res_jinjiec = {
     aitx:'res/jinjiec/a30.png'
 };
 var res_music = {
-    move:'res/music/7903.mp3'
+    move:'res/music/7903.mp3',
+    win:'res/music/win.mp3',
+    win2:'res/music/win2.wav',
+    failure:'res/music/failure.mp3',
+    btn:'res/music/btn.wav',
+    btn2:'res/music/btn2.wav',
+    GMusic:'res/music/GMusic.mp3',
+    bean:'res/music/bean.wav'
 };
 
 var res_txtimg = {

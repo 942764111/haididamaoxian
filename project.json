@@ -67,6 +67,7 @@
     "src/GameNode/label.js",
     "src/GameNode/DataManage.js",
     "src/GameNode/bRichText.js",
+    "src/GameNode/AudioManage.js",
 
     "src/Scene/GameBeginScene.js",
     "src/Scene/GameMoveScene.js",
@@ -84,7 +85,6 @@
     "src/Layer/touzhujilu.js",
     "src/Layer/caidanBtn.js",
     "src/Layer/shezhi.js",
-    "src/Layer/gulijindaozhang.js",
     "src/Layer/promptBox/activity.js",
 
     "src/Layer/Node/ActionNodes.js",

@@ -76,6 +76,7 @@
             case ccui.Widget.TOUCH_MOVED:
                 break;
             case ccui.Widget.TOUCH_ENDED:
+                X.GameBtnEffect();
                this.removeFromParent();
                 X.wangqi._instance = null;
                 break;

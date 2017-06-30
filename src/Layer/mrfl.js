@@ -81,7 +81,9 @@
                                     if(returndata.code==GC.HTTPDATA.TG){
                                         var data = returndata.data;
                                         //兑换成功
-                                        X.tip_NB.show(data['note']);
+                                        X.tip_NB.show({
+                                            str:data['note']
+                                        });
                                         GC.USER_DATA.DATA['points'] = data['usermoney'];
 
                                         X.DataMger.Getinstance({
@@ -103,11 +105,15 @@
 
                                     }else{
                                         //兑换失败
-                                        X.tip_NB.show(returndata['message']);
+                                        X.tip_NB.show({
+                                            str:returndata['message']
+                                        });
                                     }
                                 },
                                 error: function (err) {
-                                    X.tip_NB.show(LNG.WLCW);
+                                    X.tip_NB.show({
+                                        str:LNG.WLCW
+                                    });
                                 }
                             });
                             this.removeFromParent();
@@ -136,6 +142,7 @@
                 case ccui.Widget.TOUCH_MOVED:
                     break;
                 case ccui.Widget.TOUCH_ENDED:
+                    X.GameBtnEffect();
                     this.removeFromParent();
                     X.GamePromptbox._instance = null;
                     break;

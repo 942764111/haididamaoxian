@@ -3,16 +3,28 @@
     var tip_NB = cc.Class.extend({
         str     :   null,
         objarr  :   [],
+        isSpecialshow : false,
         ctor: function() {
         },
-        createItem : function(btn){
+        createItem : function(){
             var me = this;
+            var ishasSamestr = false;
+            if(this.objarr){
+                for(var i=0;i<this.objarr.length;i++){
+                        if(this.objarr[i]['txt'].getString()==this.str){
+                            ishasSamestr = true;
+                            break;
+                        }
+                }
+            }
+            if(ishasSamestr)return;
             var spriteFrame = cc.spriteFrameCache.getSpriteFrame("tishiimg.png");
             var img = new cc.Sprite(spriteFrame);
-            if(btn){
-                img.btn = btn;
-                img.btn.setMouseEnabled(false);
+
+            if(this.isSpecialshow){
+                img.setScale(1.5);
             }
+
             if(this.objarr.length>0){
                 img.setPosition(this.objarr[this.objarr.length-1].getPosition());
                 img.runAction(cc.moveTo(0.1,cc.winSize.width/2,(this.objarr[this.objarr.length-1].y-this.objarr[this.objarr.length-1].getContentSize().height)-10))
@@ -24,6 +36,7 @@
             img.txt = new cc.LabelTTF(this.str,"Arial",30);
             img.txt.x=img.getContentSize().width/2;
             img.txt.y=img.getContentSize().height/2;
+
             img.addChild(img.txt);
             GC.SCENE['node'].addChild(img,99999);
             this.objarr.push(img);
@@ -33,23 +46,27 @@
                     if(img.txt){
                         img.txt.runAction(cc.sequence(cc.fadeOut(1.5)));
                     }
-                    img.runAction(cc.sequence(cc.fadeOut(1.5),new cc.callFunc(function(){this.removeFromParent();},img)));
-
-                    if(btn) {
-                        img.btn.setMouseEnabled(true);
-                    }
-                    me.objarr.splice(0,1);
+                    img.runAction(cc.sequence(cc.fadeOut(1.5),new cc.callFunc(function(){
+                        this.removeFromParent();
+                        X.releaseAlls(me.objarr);
+                    },img)));
             },1500);
         }
     });
+
     X.tip_NB = {
         _instance: null,
-        show: function(str,btn){
+        show: function(parameters){
             if (!this._instance){
                 this._instance = new tip_NB();
             }
-            this._instance.str = str;
-            this._instance.createItem(btn);
+            /**
+             * str//显示的文字
+             * isSpecialshow//是否特显  bool
+             */
+            this._instance.str = parameters.str;
+            this._instance.isSpecialshow = parameters.isSpecialshow;
+            this._instance.createItem();
         }
     };
 })();

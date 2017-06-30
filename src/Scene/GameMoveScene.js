@@ -10,6 +10,7 @@ var GameMoveScene = cc.Scene.extend({
     isrefreshDATA   : true,//是否刷新界面数据
     GUIZE       :   null,
     FAILUREindex     :   null,
+
     onEnter: function () {
         this._super();
         this.YZ_SCORE = GC.YZ_ID['score'];
@@ -49,9 +50,11 @@ var GameMoveScene = cc.Scene.extend({
                 break;
             case 'replay':
                 me.GAMESTATE = State;
-                X.tip_NB.show(LNG.REPLAY);
+                X.tip_NB.show({
+                    str:LNG.REPLAY,
+                    isSpecialshow:true
+                });
                 this.initGameData();
-
                 me.btn_fallbackMethods(true);
 
                 var Roulette = this.Layer['rouletteIndex'];
@@ -116,52 +119,6 @@ var GameMoveScene = cc.Scene.extend({
         });
 
         initUserData();
-        ////初始化界面按钮
-        //function initBtns(){
-        //    // 轮盘按钮
-        //    var res;
-        //    for(var i=0;i<GC.PC.length-1;i++){
-        //        res = '$_'+GC.PC[i].flaxres;
-        //        Roulette[res+'_bj'].setVisible(false);
-        //        Roulette[res+'_utxt'].setVisible(false);
-        //        Roulette[res+'_aitxt'].setVisible(false);
-        //
-        //        Roulette[res].icon= null;
-        //        Roulette[res].iconai= null;
-        //        Roulette[res].linessize= GC.LINES_SIZE[GC.PC[i].Type];
-        //        Roulette[res].readid= GC.PC[i].readid;
-        //        Roulette[res].id= GC.PC[i].id;
-        //        Roulette[res].type= GC.PC[i].Type;
-        //        Roulette[res].flaxres= GC.PC[i].flaxres;
-        //        Roulette[res].btnon= true;
-        //        flax.inputManager.addListener(Roulette[res],me.btns_roulette,InputType.up,me);
-        //        me.LpArrs.push(Roulette[res]);
-        //    }
-        //    //其他按钮
-        //    for(var j=0;j<GC.GAME_MOVE_BTNS.length;j++){
-        //        flax.inputManager.addListener(me.Layer[GC.GAME_MOVE_BTNS[j]],me.btns_Events,InputType.click,me);
-        //    }
-        //    me.Layer[GC.GAME_MOVE_BTNS[2]]['onbtn'] = true;//菜单按钮   onbtn来区分不同的回调事件
-        //    me.Layer[GC.GAME_MOVE_BTNS[2]]['caidanbtn'] = null;//菜单按钮
-        //    //押注按钮
-        //
-        //    for(var a=0;a<me.YZ_SCORE.length;a++){
-        //        flax.inputManager.addListener(me.Layer['btn_'+me.YZ_SCORE[a]],me.btns_Events,InputType.click,me);
-        //        me.Layer['btn_'+me.YZ_SCORE[a]].pos = me.Layer['btn_'+me.YZ_SCORE[a]].getPosition();
-        //    }
-        //
-        //    for(var b=0;b<GC.GAME_MOVE_CDBTNS.length;b++){
-        //        flax.inputManager.addListener(me.Layer['caidanrq'][GC.GAME_MOVE_CDBTNS[b]],me.btns_Events,InputType.click,me);
-        //
-        //    }
-        //
-        //    me.Layer['caidanrq'].setVisible(false);
-        //    if(!cc.audioEngine.isMusicPlaying()) {
-        //        me.Layer['caidanrq']['yxsx_btn'].setVisible(false);
-        //    }else{
-        //        me.Layer['caidanrq']['yxsx_btn2'].setVisible(false);
-        //    }
-        //}
         //初始化数据
         function initUserData(){
 
@@ -199,7 +156,7 @@ var GameMoveScene = cc.Scene.extend({
                 Roulette[res+'_bj'].setVisible(false);
                 Roulette[res+'_utxt'].setVisible(false);
                 Roulette[res+'_aitxt'].setVisible(false);
-
+               // Roulette[res].mainCollider.debugDraw();
                 Roulette[res].icon= null;
                 Roulette[res].iconai= null;
                 Roulette[res].linessize= GC.LINES_SIZE[GC.PC[i].Type];
@@ -257,6 +214,7 @@ var GameMoveScene = cc.Scene.extend({
         function releasethreads(){
             X.releaseAllTime();
         }
+        X.releaseAlls(GC.TOUZHU_RECORD);
         me.FAILUREindex = 0;
         me.islock = false;
         me.isGameOver = false;
@@ -287,6 +245,9 @@ var GameMoveScene = cc.Scene.extend({
 
         var obj = event.target;
         var me = this;
+        if(event.target['name']!='img'){
+            X.GameBtnEffect();
+        }
 
         if(!me.Layer['btn_caidan']['onbtn']&&obj['name']!='btn_caidan') {
             me.Layer['btn_caidan']['onbtn'] = true;
@@ -313,15 +274,15 @@ var GameMoveScene = cc.Scene.extend({
                 GC.SCENE['node'].addChild(this.GUIZE,GC.GAME_ZORDER.on);
                 break;
             case 'yxsx_btn':
+                    GC.ISMUSICPLAY = false;
                     obj.setVisible(false);
-                    cc.audioEngine.pauseAllEffects();
-                    cc.audioEngine.pauseMusic();
+                    X.AudioManage.Getinstance().isAllpauseMusicAndEffect(false);
                     me.Layer['caidanrq']['yxsx_btn2'].setVisible(true);
                 break;
             case 'yxsx_btn2':
+                    GC.ISMUSICPLAY = true;
                     obj.setVisible(false);
-                    cc.audioEngine.resumeAllEffects();
-                    cc.audioEngine.resumeMusic();
+                    X.AudioManage.Getinstance().isAllpauseMusicAndEffect(true);
                     me.Layer['caidanrq']['yxsx_btn'].setVisible(true);
                 break;
             case 'btn_fallback':
@@ -356,25 +317,30 @@ var GameMoveScene = cc.Scene.extend({
         var obj = attributes.btnobj;
         var imgpos = attributes.imgpos;
         var type = attributes.type;
-        var index = 0;//400 err重试刷新次数
         if(!obj['btnon']&&type=='user'){return}
         if(this.islock){
             if(type=='user'){
-                X.tip_NB.show(LNG.KJZ,obj);
+                X.tip_NB.show({
+                    str:LNG.KJZ
+                });
             }
 
             return;
         }
 
         if(type=='user'&&GC.USER_DATA.DATA['points']<yzscore){
-            X.tip_NB.show(LNG.YEBZ,obj);
+            X.tip_NB.show({
+                str:LNG.YEBZ
+            });
             return;
         }
 
         obj['btnon'] = false;
         if(isflowMaxScore()){
             if(type=='user'){
-                X.tip_NB.show(X.stringFormat(LNG.ZDXE,obj['linessize']),obj);
+                X.tip_NB.show({
+                    str:X.stringFormat(LNG.ZDXE,obj['linessize'])
+                });
             }
             obj['btnon'] = true;
             return;
@@ -448,22 +414,31 @@ var GameMoveScene = cc.Scene.extend({
                     success: function (returndata) {
                         if(returndata.code == 200){
                             var tempdata = returndata.data;
+
+                            GC.TOUZHU_RECORD.push({'big':big,'style':style,'num':num});
+
                             GC.HTTPDATA.boltagainindex = 1;
                             me.refreshUserData({
                                 points:tempdata['usermoney']
                             });
                             setScore();
                         }else if(returndata.code == GC.HTTPDATA.STAY_LOTTERY){
-                            X.tip_NB.show(LNG.KJZ);
+                            X.tip_NB.show({
+                                str:LNG.KJZ
+                            });
                         }else if(returndata.code == GC.HTTPDATA.FAILURE){
                             obj['btnon'] = true;
-                            X.tip_NB.show(LNG.SXSJ,obj);
+                            X.tip_NB.show({
+                                str:LNG.SXSJ
+                            });
                             X.boltagain(function(){
                                 me.GameState('GameStart');
                             });
                         }else if(returndata.code == GC.HTTPDATA.MONEY_DONT){
                             obj['btnon'] = true;
-                            X.tip_NB.show(LNG.YEBZ,obj);
+                            X.tip_NB.show({
+                                str:LNG.YEBZ
+                            });
                         }else if(returndata.code == GC.HTTPDATA.GLJDZ){
                             var tempdata = returndata.data;
                             me.refreshUserData({
@@ -476,15 +451,9 @@ var GameMoveScene = cc.Scene.extend({
                             });
 
                         }else{
-                            X.tip_NB.show(LNG.WLCW,obj);
-                            //X.Promptbox.Getinstance({
-                            //    btnsType:4,
-                            //    txt:LNG.WLYCTC,
-                            //    callback:function(){
-                            //        history.go(-1);
-                            //    },
-                            //    ispauseGame:true
-                            //});
+                            X.tip_NB.show({
+                                str:LNG.WLCW
+                            });
                         }
                     },
                     error: function (err) {
@@ -596,7 +565,9 @@ var GameMoveScene = cc.Scene.extend({
         }
 
         if(this.islock){
-            X.tip_NB.show(LNG.KJZ,obj);
+            X.tip_NB.show({
+                str:LNG.KJZ
+            });
             return;
         }
 
@@ -628,9 +599,13 @@ var GameMoveScene = cc.Scene.extend({
                             me.GameState('GameStart')
                         });
                     }else if(returndata.code ==  GC.HTTPDATA.STAY_LOTTERY){
-                        X.tip_NB.show(LNG.KJZ);
+                        X.tip_NB.show({
+                            str:LNG.KJZ
+                        });
                     }else{
-                        X.tip_NB.show(LNG.CXSB,obj);
+                        X.tip_NB.show({
+                            str:LNG.CXSB
+                        });
                     }
                 },
                 error: function () {
@@ -691,7 +666,6 @@ var GameMoveScene = cc.Scene.extend({
                         GC.USER_DATA.DATA['nowissue'] = tempdata['nowissue'];
 
                         barindex = GC.USER_DATA.DATA['remain_buy_seconds'];
-                        var seconds = GC.USER_DATA.DATA['remain_seconds'];
 
                         refreshOnRecord();
 
@@ -700,12 +674,15 @@ var GameMoveScene = cc.Scene.extend({
                             'node': me.Layer
                         });
                         if(barindex==2){//等待开奖中
-                            X.tip_NB.show(LNG.TZXZ);
+                            X.tip_NB.show({
+                                str:LNG.TZXZ,
+                                isSpecialshow:true
+                            });
                             me.islock = true;
                             X.AINodes.Getinstance().releasethreads();
                         }
 
-                        if(seconds<=13){
+                        if(barindex<=0){
                             me.GameState('GameOver');
                             barindex=0;
                             return;
@@ -719,7 +696,10 @@ var GameMoveScene = cc.Scene.extend({
 
                                 }
                                 if (barindex == 2) {//等待开奖中
-                                    X.tip_NB.show(LNG.TZXZ);
+                                    X.tip_NB.show({
+                                        str:LNG.TZXZ,
+                                        isSpecialshow:true
+                                    });
                                     me.islock = true;
                                     X.AINodes.Getinstance().releasethreads();
                                 }
@@ -798,7 +778,6 @@ var GameMoveScene = cc.Scene.extend({
     GameOver  : function(){
         var me = this;
 
-        var index = 0;
         //本地测试
 /*        Method({"num":13,"style":1,"big":1});
         return;*/
@@ -873,6 +852,9 @@ var GameMoveScene = cc.Scene.extend({
         var obj;
         var LPdatas = GC.LPTYPE;
         var byidfind
+
+
+
         for(var i=0;i<GC.PC.length;i++){
             obj = GC.PC[i];
             for(var j=0;j<LPdatas.length;j++){
@@ -892,10 +874,15 @@ var GameMoveScene = cc.Scene.extend({
             ));
           //  obj.setColor(cc.color(GC.COLOR[0]));
         }
-        me.refreshGameoverData(data['tempdata']);
+        me.refreshGameoverData(data);
+
+        me.scheduleOnce(function(){
+            GC.SCENE['node'].GameState('replay');
+        },5);
     },
-    refreshGameoverData : function(tempdata){
+    refreshGameoverData : function(data){
         var me = this;
+        var tempdata = data['tempdata'];
         //增加一条往期数据
         //X.wangqi.Getinstance({
         //    num:GC.PC[tempdata['num']-1]['readid'],
@@ -904,11 +891,92 @@ var GameMoveScene = cc.Scene.extend({
         //    points:tempdata['points'],
         //    issue:tempdata['issue']
         //});
-        //刷新用户数据
-        me.refreshUserData({
-            points:tempdata['points'],
-            newissue:tempdata['newissue']
-        });
+
+        //结算后豆动画!!!
+        me.scheduleOnce(function(){
+            function createBean(){
+                var spriteFrame = cc.spriteFrameCache.getSpriteFrame("dou.png");
+                var obj,byidfind,Roulette,Rouletteobj,PosObj,ToObj,random_posx,rotate_pos;
+                for(var i=0;i<GC.PC.length;i++){
+                    obj = GC.PC[i];
+                    for(var j = 0;j<data.winRouletteids.length;j++){
+                        Roulette = data.winRouletteids[j];
+                        for(var a in Roulette) {
+                            //num 特殊处理
+                            byidfind = a=='num'?obj['id']:obj['readid'];
+                            if(Roulette[a]&&obj.Type==a&&Roulette[a]==byidfind){
+                                Rouletteobj = me.Layer['rouletteIndex']['$_'+obj['flaxres']+'_bj'];
+                                PosObj = Rouletteobj.parent.convertToWorldSpace(Rouletteobj.getPosition());
+                                ToObj = me.Layer['btn_add'].parent.convertToWorldSpace(me.Layer['btn_add'].getPosition());
+                                var index = 0;
+                                for(var bean=0;bean<10;bean++){
+                                    index+=0.1;
+                                    var sp = new cc.Sprite(spriteFrame);
+                                    sp.x =PosObj.x;
+                                    sp.y =PosObj.y;
+
+                                    rotate_pos =  Math.random()*360;
+                                    if(Math.floor(Math.random()*2)){
+                                        random_posx = Math.random()*200-200;
+                                    }else{
+                                        random_posx = Math.random()*200+200;
+                                    }
+                                    sp.runAction(cc.sequence(
+                                        cc.rotateTo(0.01,rotate_pos),cc.jumpBy(Math.random()*1.3,cc.p(random_posx,150),70,1)
+                                        ,cc.moveTo(index,ToObj),new  cc.CallFunc(function(){
+                                            me.Layer['btn_add'].runAction(cc.sequence(
+                                                cc.scaleTo(0.1, 1.5, 1.5),
+                                                cc.scaleTo(0.1, 1, 1)
+                                            ));
+                                            X.AudioManage.Getinstance().playEffect(res_music.bean);
+                                            this.removeFromParent();
+                                        },sp)
+                                    ));
+                                    GC.SCENE['node'].addChild(sp);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            createBean();
+
+            var points = Math.abs(GC.USER_DATA.DATA['points']-tempdata['points'])||0;
+            var pointindex = 0;
+
+            function refreshUserbean(){
+
+                if(pointindex>points){me.unschedule(refreshUserbean);return;}
+                me.Layer['addendbean'].text = '(+'+pointindex+')';
+                pointindex++;
+            }
+            if(points) {
+                if(GC.TOUZHU_RECORD.length>0) {
+                    me.schedule(refreshUserbean, 0.01);
+                }
+                me.scheduleOnce(function(){
+                    if(GC.TOUZHU_RECORD.length>0){
+                        me.Layer['addendbean'].text = '(+'+points+')';
+                        me.Layer['addendbean'].runAction(cc.repeatForever(cc.sequence(cc.fadeIn(0.2),cc.fadeOut(0.2))));
+                        me.unschedule(refreshUserbean);
+                    }
+
+                    me.scheduleOnce(function(){
+                        if(GC.TOUZHU_RECORD.length>0) {
+                            me.Layer['addendbean'].text = '';
+                            me.Layer['addendbean'].stopAllActions();
+                            me.Layer['addendbean'].runAction(cc.fadeIn(0.1));
+                        }
+
+                        me.refreshUserData({
+                            points:tempdata['points'],
+                            newissue:tempdata['newissue']
+                        });
+                    },1.5);
+                },2);
+            }
+
+        },1);
     },
     //刷新玩家金钱数据
     refreshUserData : function(data){

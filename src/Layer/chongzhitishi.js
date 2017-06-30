@@ -53,7 +53,9 @@ var chongzhitishi= cc.Layer.extend({
                     if(returndata.code==GC.HTTPDATA.TG){
                         var data = returndata.data;
                         //兑换成功
-                        X.tip_NB.show(LNG.THCG,obj);
+                        X.tip_NB.show({
+                            str:LNG.THCG
+                        });
                         GC.USER_DATA.DATA['points'] = data['usermoney'];
                         X.DataMger.Getinstance({
                             'attributes':{
@@ -63,7 +65,9 @@ var chongzhitishi= cc.Layer.extend({
                         });
                     }else if(returndata.code==GC.HTTPDATA.MONEY_DONT){
                         //余额不足
-                        X.tip_NB.show(LNG.YEBZ,obj);
+                        X.tip_NB.show({
+                            str:LNG.YEBZ
+                        });
 
                     }else if(returndata.code==GC.HTTPDATA.FAILURE){
                         X.boltagain(function(){
@@ -72,12 +76,16 @@ var chongzhitishi= cc.Layer.extend({
 
                     }else{
                         //兑换失败
-                        X.tip_NB.show(LNG.WLCW,obj);
+                        X.tip_NB.show({
+                            str:LNG.WLCW
+                        });
                     }
                 },
                 error: function (err) {
                     //兑换失败
-                    X.tip_NB.show(LNG.WLCW,obj);
+                    X.tip_NB.show({
+                        str:LNG.WLCW
+                    });
                 }
             });
         }

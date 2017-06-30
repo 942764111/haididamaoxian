@@ -71,6 +71,7 @@
     },
     btns_Events : function(touch, event){
         var obj = event.target,me = this;
+        X.GameBtnEffect();
         switch(obj['name']){
             case 'btn_qd':
                 this.removeFromParent();

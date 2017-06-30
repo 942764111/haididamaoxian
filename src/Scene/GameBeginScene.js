@@ -7,9 +7,8 @@ var GameBeginScene = cc.Scene.extend({
         GC.ISOVER = false;
         GC.SCENE['node'] = this;
         GC.SCENE['id'] = 'GameBeginScene';
-
         if(!music){
-            cc.audioEngine.playMusic(res_music.move,true);
+            X.AudioManage.Getinstance().playMusic(res_music.move,true);
             music = true;
         }
 
@@ -108,6 +107,7 @@ var GameBeginScene = cc.Scene.extend({
                                             cc.scaleTo(0.1, 1.3, 1.3),
                                             cc.scaleTo(0.1, 1, 1)
                                         ));
+                                        X.AudioManage.Getinstance().playEffect(res_music.bean);
                                         this.removeFromParent();
                                     },sprite)
                                 ));
@@ -153,7 +153,9 @@ var GameBeginScene = cc.Scene.extend({
     //========================btns
     btns_Events : function(touch, event){
         var obj = event.target,me = this;
-        //    GAME_BEGIN_BTNS:['btn_bean','btn_fh','btn_th','btn_mrfl','btn_xsc','btn_jjc','btn_gsc'],
+        if(event.target['name']!='img'){
+            X.GameBtnEffect();
+        }
 
         if(!me.Layer['btn_sz']['onbtn']&&obj['name']!='btn_sz') {
             me.Layer['btn_sz']['onbtn'] = true;
@@ -162,7 +164,7 @@ var GameBeginScene = cc.Scene.extend({
 
         switch(event.target['name']){
             case 'btn_bean'://充值豆子
-            // this.addChild(new chongzhi(),GC.GAME_ZORDER.on);
+             //this.addChild(new chongzhi(),GC.GAME_ZORDER.on);
                 X.Gotopup();
 
                 break;
@@ -181,19 +183,25 @@ var GameBeginScene = cc.Scene.extend({
                 break;
             case 'btn_jjc'://进阶场
                 if(GC.USER_DATA.DATA['points']<100){
-                    X.tip_NB.show(X.stringFormat(LNG.JJC,100),obj);
+                    X.tip_NB.show({
+                        str:X.stringFormat(LNG.JJC,100)
+                    });
                     return;
                 }
                 this.btn_jjc();
                 break;
             case 'btn_gsc'://高手场
                 if(GC.USER_DATA.DATA['points']<100){
-                    X.tip_NB.show(X.stringFormat(LNG.JJC,100),obj);
+                    X.tip_NB.show({
+                        str:X.stringFormat(LNG.JJC,100)
+                    });
                     return;
                 }
 
                 if(GC.USER_DATA.DATA['points']<500){
-                    X.tip_NB.show(X.stringFormat(LNG.GSC,500),obj);
+                    X.tip_NB.show({
+                        str:X.stringFormat(LNG.GSC,500)
+                    });
                     return;
                 }
                 this.btn_gsc();
@@ -216,14 +224,12 @@ var GameBeginScene = cc.Scene.extend({
                 break;
             case 'yxsx_btn':
                 obj.setVisible(false);
-                cc.audioEngine.pauseAllEffects();
-                cc.audioEngine.pauseMusic();
+                X.AudioManage.Getinstance().isAllpauseMusicAndEffect(false);
                 me.Layer['caidanrq']['yxsx_btn2'].setVisible(true);
                 break;
             case 'yxsx_btn2':
                 obj.setVisible(false);
-                cc.audioEngine.resumeAllEffects();
-                cc.audioEngine.resumeMusic();
+                X.AudioManage.Getinstance().isAllpauseMusicAndEffect(true);
                 me.Layer['caidanrq']['yxsx_btn'].setVisible(true);
                 break;
             case 'tzjl_btn':

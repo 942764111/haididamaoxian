@@ -50,12 +50,14 @@ var guize= cc.Layer.extend({
         this.addChild(new pointTouchLayer());
     },
     btns_Events : function(sender,type){
+
         switch (type) {
             case ccui.Widget.TOUCH_BEGAN:
                 break;
             case ccui.Widget.TOUCH_MOVED:
                 break;
             case ccui.Widget.TOUCH_ENDED:
+                X.GameBtnEffect();
                 this.removeFromParent();
                 break;
             case ccui.Widget.TOUCH_CANCELED:

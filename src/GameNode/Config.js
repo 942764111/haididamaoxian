@@ -146,6 +146,12 @@ GC.ISOVER = false;
 GC.TOUCHLAYER_TY = 70;
 
 /**
+ * 当前投注记录
+ * @type {Array}
+ */
+GC.TOUZHU_RECORD = [];
+
+/**
  * AI 数量
  * @type {number}
  */
