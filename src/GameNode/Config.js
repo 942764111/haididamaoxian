@@ -152,10 +152,10 @@ GC.TOUCHLAYER_TY = 70;
 GC.TOUZHU_RECORD = [];
 
 /**
- * AI 数量
+ * AI支持的最大数量
  * @type {number}
  */
-GC.AI_COUNT = 4;
+GC.AI_MAXCOUNT = 4;
 
 /**
  * 初始化判断是否签到
@@ -209,6 +209,10 @@ GC.HTTPDATA={
     'pokerlogtail':'http://api.qlbuy.cc/h5/poker/logtail',//投注记录详情
     'qulebuybacktopay':'http://api.qlbuy.cc/h5/poker/qulebuybacktopay',//返回APP界面
     'qulebuypay':'http://api.qlbuy.cc/h5/poker/static/qulebuypay',//返回充值界面
+    /**
+     * randpersion ? num = (int) //请求电脑AI个数
+     */
+    'randpersion':'http://api.qlbuy.cc/h5/poker/randpersion',//电脑AI
     //状态码:
     'FAILURE':700,//与服务器失去通讯
     'STAY_LOTTERY':600,//等待开奖中

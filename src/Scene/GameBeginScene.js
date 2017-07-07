@@ -74,61 +74,41 @@ var GameBeginScene = cc.Scene.extend({
         }
 
         function GetHTTPSData(){
-            $.ajax({
-                type: 'GET',
-                url: GC.HTTPDATA.pokerinfo,
-                dataType: GC.HTTPDATA.DATA_TYPE,
-                async:'false',
-                data: {
-                    uid: GC.USER_DATA.uid,
-                    token: GC.USER_DATA.token
-                },
-                success: function (returndata) {
-                    if(returndata.code == 200){
-                        var tempdata = returndata.data;
-                        GC.USER_DATA.DATA = tempdata;
-                        initUserData();
-                        initBtns();
+            function initAIData(){
 
-                        if(!GC.USER_DATA.DATA['issign']){
-                            GC.IS_SIGN = 1;
-                            var spritePos = me.Layer['btn_mrfl'].parent.convertToWorldSpace(me.Layer['btn_mrfl'].getPosition());
-                            var namepos = me.Layer['btn_bean'].parent.convertToWorldSpace(me.Layer['btn_bean'].getPosition());
-                            var spriteFrame = cc.spriteFrameCache.getSpriteFrame("dou.png");
-                            var index = 0;
-                            for(var i=0;i<8;i++){
-                                index+=0.2;
-                                var sprite = new cc.Sprite(spriteFrame);
-                                sprite.x = spritePos.x;
-                                sprite.y = spritePos.y;
-                                sprite.runAction(cc.sequence(
-                                    cc.moveTo(index,namepos),new  cc.CallFunc(function(){
-                                        me.Layer['btn_bean'].runAction(cc.sequence(
-                                            cc.scaleTo(0.1, 1.3, 1.3),
-                                            cc.scaleTo(0.1, 1, 1)
-                                        ));
-                                        X.AudioManage.Getinstance().playEffect(res_music.bean);
-                                        this.removeFromParent();
-                                    },sprite)
-                                ));
-                                me.addChild(sprite,20);
+                $.ajax({
+                    type: 'GET',
+                    url: GC.HTTPDATA.randpersion,
+                    dataType: GC.HTTPDATA.DATA_TYPE,
+                    async:'false',
+                    data: {
+                        num: Math.floor(Math.random()*2+3),
+                    },
+                    success: function (returndata) {
+                        if(returndata.code == 200){
+                            var tempdata = returndata.data;
+                            cc.log(tempdata);
+                            X.releaseAlls(GC.USER_DATA.DATA['random_users']);
+                            for(var i=0;i<GC.AI_MAXCOUNT;i++){
+                                GC.USER_DATA.DATA['random_users'].splice(i,1,false);
+                                for(var j=0;j<tempdata.length;j++){
+                                    GC.USER_DATA.DATA['random_users'].splice(i,1,tempdata[j]);
+                                    tempdata.splice(j,1);
+                                    break;
+                                }
                             }
-
-                            X.activity.Getinstance({
-                                titleimg:1,
-                                txt: X.stringFormat(LNG.QLGDZ,80)
+                            cc.log(GC.USER_DATA.DATA['random_users']);
+                        }else{
+                            X.Promptbox.Getinstance({
+                                btnsType:3,
+                                txt:LNG.WLYCTC,
+                                callback:function(){
+                                    X.closeWebPage();
+                                }
                             });
                         }
-
-                    }else if(returndata.code == GC.HTTPDATA.FAILURE){
-                        X.Promptbox.Getinstance({
-                            btnsType:3,
-                            txt:LNG.WLYCTC,
-                            callback:function(){
-                                X.closeWebPage();
-                            }
-                        });
-                    }else{
+                    },
+                    error: function (err) {
                         X.Promptbox.Getinstance({
                             btnsType:3,
                             txt:LNG.WLYCTC,
@@ -137,17 +117,89 @@ var GameBeginScene = cc.Scene.extend({
                             }
                         });
                     }
-                },
-                error: function (err) {
-                    X.Promptbox.Getinstance({
-                        btnsType:3,
-                        txt:LNG.WLYCTC,
-                        callback:function(){
-                            X.closeWebPage();
+                });
+            }
+            function initGameData(){
+                $.ajax({
+                    type: 'GET',
+                    url: GC.HTTPDATA.pokerinfo,
+                    dataType: GC.HTTPDATA.DATA_TYPE,
+                    async:'false',
+                    data: {
+                        uid: GC.USER_DATA.uid,
+                        token: GC.USER_DATA.token
+                    },
+                    success: function (returndata) {
+                        if(returndata.code == 200){
+                            var tempdata = returndata.data;
+
+                            GC.USER_DATA.DATA = tempdata;
+                            initUserData();
+                            initBtns();
+
+                            if(!GC.USER_DATA.DATA['issign']){
+                                GC.IS_SIGN = 1;
+                                var spritePos = me.Layer['btn_mrfl'].parent.convertToWorldSpace(me.Layer['btn_mrfl'].getPosition());
+                                var namepos = me.Layer['btn_bean'].parent.convertToWorldSpace(me.Layer['btn_bean'].getPosition());
+                                var spriteFrame = cc.spriteFrameCache.getSpriteFrame("dou.png");
+                                var index = 0;
+                                for(var i=0;i<8;i++){
+                                    index+=0.2;
+                                    var sprite = new cc.Sprite(spriteFrame);
+                                    sprite.x = spritePos.x;
+                                    sprite.y = spritePos.y;
+                                    sprite.runAction(cc.sequence(
+                                        cc.moveTo(index,namepos),new  cc.CallFunc(function(){
+                                            me.Layer['btn_bean'].runAction(cc.sequence(
+                                                cc.scaleTo(0.1, 1.3, 1.3),
+                                                cc.scaleTo(0.1, 1, 1)
+                                            ));
+                                            X.AudioManage.Getinstance().playEffect(res_music.bean);
+                                            this.removeFromParent();
+                                        },sprite)
+                                    ));
+                                    me.addChild(sprite,20);
+                                }
+
+                                X.activity.Getinstance({
+                                    titleimg:1,
+                                    txt: X.stringFormat(LNG.QLGDZ,80)
+                                });
+                            }
+
+                            initAIData();
+                        }else if(returndata.code == GC.HTTPDATA.FAILURE){
+                            X.Promptbox.Getinstance({
+                                btnsType:3,
+                                txt:LNG.WLYCTC,
+                                callback:function(){
+                                    X.closeWebPage();
+                                }
+                            });
+                        }else{
+                            X.Promptbox.Getinstance({
+                                btnsType:3,
+                                txt:LNG.WLYCTC,
+                                callback:function(){
+                                    X.closeWebPage();
+                                }
+                            });
                         }
-                    });
-                }
-            });
+                    },
+                    error: function (err) {
+                        X.Promptbox.Getinstance({
+                            btnsType:3,
+                            txt:LNG.WLYCTC,
+                            callback:function(){
+                                X.closeWebPage();
+                            }
+                        });
+                    }
+                });
+            }
+
+            initGameData();
+
         }
     },
     //========================btns
@@ -258,6 +310,7 @@ var GameBeginScene = cc.Scene.extend({
         return parseInt(me.Layer['userbean'].getString());
     },
     onExit:function() {
+        X.releaseAlls(X.tip_NB.Getinstance().objarr);
         X.releaseSceneNodes();
     }
 });

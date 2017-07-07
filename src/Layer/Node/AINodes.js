@@ -3,34 +3,47 @@
  */
 (function(){
     var _AINodes= cc.Node.extend({
-        me : null,
         TimeEvents : [],
+        AI_COUNT : 0,
         ctor: function(){
         },
         initData : function(){
-            var me = this.me;
-            var objsize = me.Layer['ai_1']['img'].getContentSize();
+
+            var scenenode = GC.SCENE['node'],me = this,objsize;
+            me.AI_COUNT = 0;
+            objsize = scenenode.Layer['ai_1']['img'].getContentSize();
 
             var aidata = GC.USER_DATA.DATA['random_users'];
-            for(var i=0;i<aidata.length;i++){
-                var obj = me.Layer['ai_'+(i+1)];
-
-                X.DataMger.Getinstance({
-                    //'img_img':'http://192.168.1.73/yyl/test.png'
-                    'attributes':{'txt':aidata[i]['nickname'],'img_img':aidata[i]['headpic']},
-                    'node':obj
-                });
-                obj['img'].setScaleX(objsize.width/obj['img'].getContentSize().width);
-                obj['img'].setScaleY(objsize.height/obj['img'].getContentSize().height);
+            for(var i=0;i<GC.AI_MAXCOUNT;i++){
+                var obj = scenenode.Layer['ai_'+(i+1)];
+                obj.setVisible(false);
+                if(aidata[i]) {
+                    obj.setVisible(true);
+                    me.AI_COUNT+=1;
+                    X.DataMger.Getinstance({
+                        //'img_img':'http://192.168.1.73/yyl/test.png'
+                        'attributes': {'txt': aidata[i]['nickname'], 'img_img': aidata[i]['headpic']},
+                        'node': obj
+                    });
+                    obj['img'].setScaleX(objsize.width / obj['img'].getContentSize().width);
+                    obj['img'].setScaleY(objsize.height / obj['img'].getContentSize().height);
+                }else{
+                    obj.setVisible(false);
+                }
             }
         },
+        /**
+         * AI投注接口
+         */
         runGame : function() {
-            var me = this.me;
+            this.releasethreads();
+            var scenenode =  GC.SCENE['node'];
+            if(scenenode.isGameOver)return;
             var sizeindex = 1;
             var readTime = Math.floor(Math.random()*1500+1000);
             var time = setInterval(function(){
                 readTime = Math.floor(Math.random()*1500+1000);
-                if(me.isGameOver){
+                if(scenenode.isGameOver){
                     clearTimeout(time);
                 }
                 rouletteMethod();
@@ -75,14 +88,97 @@
                 }
             //    cc.log('sizeindex:'+randrbtnnum+','+'num');
                 rbtnobj = allbtn[randrbtnnum];
-                var readai = Math.floor(Math.random()*GC.AI_COUNT+1);
-                me.btn_rouletteMethods({
-                    yzscore:rscore,
-                    btnobj:me.Layer['rouletteIndex']['$_'+rbtnobj],
-                    type:'ai',
-                    imgpos:me.Layer['ai_'+readai]['img']
-                })
+                var readai = Math.ceil(Math.random()*GC.AI_MAXCOUNT);
+                if(GC.USER_DATA.DATA['random_users'][readai-1]){
+                    scenenode.btn_rouletteMethods({
+                        yzscore: rscore,
+                        btnobj: scenenode.Layer['rouletteIndex']['$_' + rbtnobj],
+                        type: 'ai',
+                        imgpos: scenenode.Layer['ai_' + readai]['img']
+                    })
+                }
             }
+
+        },
+        /**
+         * 游戏中控制AI数量管理接口
+         * @constructor
+         */
+        GMoveAiCountManage : function(){
+            var scenenode =  GC.SCENE['node'],me = this,randTime = Math.random()*25+5,aidata=GC.USER_DATA.DATA['random_users'];
+            function GetData(){
+                function add(){
+                    var randnum = Math.floor(Math.random()*(GC.AI_MAXCOUNT - me.AI_COUNT));
+                    $.ajax({
+                        type: 'GET',
+                        url: GC.HTTPDATA.randpersion,
+                        dataType: GC.HTTPDATA.DATA_TYPE,
+                        async:true,
+                        cache:true,
+                        data: {
+                            num:randnum,
+                        },
+                        success: function (returndata) {
+                            if(returndata.code == 200){
+                                var tempdata = returndata.data;
+                                var randAIindex;
+                                for(var i = 0;i<tempdata.length;i++){
+                                    randAIindex =Math.floor(Math.random()*GC.AI_MAXCOUNT);
+                                        if(aidata[randAIindex]==false){
+                                            GC.USER_DATA.DATA['random_users'].splice(randAIindex,1,tempdata[i]);
+                                            tempdata.splice(i,1);
+                                            break;
+                                        }
+                                }
+                                me.initData();
+                                me.runGame();
+                            }else{
+                                X.Promptbox.Getinstance({
+                                    btnsType:3,
+                                    txt:LNG.WLYCTC,
+                                    callback:function(){
+                                        X.closeWebPage();
+                                    }
+                                });
+                            }
+                        },
+                        error: function (err) {
+                            X.Promptbox.Getinstance({
+                                btnsType:3,
+                                txt:LNG.WLYCTC,
+                                callback:function(){
+                                    X.closeWebPage();
+                                }
+                            });
+                        }
+                    });
+                }
+                function remove(){
+                    var randnum = Math.floor(Math.random()*GC.AI_MAXCOUNT);
+                    GC.USER_DATA.DATA['random_users'].splice(randnum,1,false);
+                    me.initData();
+                    me.runGame();
+                }
+
+                var final_AICountControl = 2;
+                if(me.AI_COUNT<=final_AICountControl){
+                    add();
+                }else if(me.AI_COUNT>=final_AICountControl+1){
+                    var rand = Math.floor(Math.random()*2);
+                    if(rand){
+                        remove();
+                    }else if(!rand&&me.AI_COUNT<GC.AI_MAXCOUNT){
+                        add();
+                    }
+                }
+            }
+
+
+            scenenode.schedule(function(){
+                cc.log(randTime);
+                randTime = Math.random()*25+5;
+                GetData();
+            },randTime)
 
         },
         releasethreads : function(){
@@ -97,12 +193,10 @@
 
     X.AINodes= {
         _instance: null
-        ,Getinstance: function(node){
-            var me = this;
+        ,Getinstance: function(){
             if(!this._instance){
                 this._instance = new _AINodes();
             }
-            this._instance.me = node;
             return this._instance;
         }
     };

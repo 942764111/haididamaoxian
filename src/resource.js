@@ -64,15 +64,18 @@ var res_Button = {
 }
 var res_gaoshouc = {
     img:'res/gaoshouc/img.png',
-    aitx:'res/gaoshouc/a30.png'
+    aitx:'res/gaoshouc/a30.png',
+    kong:'res/gaoshouc/a77.png'
 };
 var res_xinshouc = {
     img:'res/xinshouc/xinshouimg.png',
-    aitx:'res/xinshouc/a30.png'
+    aitx:'res/xinshouc/a30.png',
+    kong:'res/xinshouc/a77.png'
 };
 var res_jinjiec = {
     img:'res/jinjiec/a14.png',
-    aitx:'res/jinjiec/a30.png'
+    aitx:'res/jinjiec/a30.png',
+    kong:'res/jinjiec/a77.png'
 };
 var res_music = {
     move:'res/music/7903.mp3',

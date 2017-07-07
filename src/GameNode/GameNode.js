@@ -125,6 +125,10 @@ var X = {};
     X.Gotopup = function(){
         self.location=GC.HTTPDATA.qulebuypay;
     }
+    /**
+     * 断线重连
+     * @param callback
+     */
     X.boltagain = function(callback){
         var index = GC.HTTPDATA.boltagainindex;
         var Maxindex = GC.HTTPDATA.Maxboltagainindex;

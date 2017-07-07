@@ -68,5 +68,11 @@
             this._instance.isSpecialshow = parameters.isSpecialshow;
             this._instance.createItem();
         }
+        ,Getinstance: function(){
+            if(!this._instance){
+                this._instance = new tip_NB();
+            }
+            return this._instance;
+        }
     };
 })();
