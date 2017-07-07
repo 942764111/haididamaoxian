@@ -46,14 +46,25 @@ var X = {};
             });
         }
     },
-    X.isstr = function(str)
+    /**
+     *
+     * 此字符串中是否包含X字符串
+     * @param str
+     * @param findstr
+     * @returns {boolean}
+     */
+    X.ishasthestr = function(str,findstr)
     {
-        if(str&&str.trim()!=""){
+        if(!findstr||findstr == undefined){
+            findstr = "";
+        }
+        if(str&&str != undefined&&str.trim()!=""){
             var hasstr = str.substring(0,2);
-            if('$_'===hasstr){
+            if(findstr===hasstr){
                 return true;
             }
         }
+        return false;
     },
     /**
      * 格式化字符串
@@ -125,6 +136,10 @@ var X = {};
     X.Gotopup = function(){
         self.location=GC.HTTPDATA.qulebuypay;
     }
+    /**
+     * 断线重连
+     * @param callback
+     */
     X.boltagain = function(callback){
         var index = GC.HTTPDATA.boltagainindex;
         var Maxindex = GC.HTTPDATA.Maxboltagainindex;

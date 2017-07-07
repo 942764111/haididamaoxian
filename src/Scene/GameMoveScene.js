@@ -130,7 +130,7 @@ var GameMoveScene = cc.Scene.extend({
 
             //初始化AI
             me.getAINode().initData();
-
+            me.getAINode().GMoveAiCountManage();
             //初始化轮盘数据
             X.DataMger.Getinstance({
                 'attributes':{
@@ -449,10 +449,10 @@ var GameMoveScene = cc.Scene.extend({
                                 titleimg:2,
                                 txt: X.stringFormat(LNG.QLGDZ,50)
                             });
-
+                            obj['btnon'] = true;
                         }else{
-                            X.tip_NB.show({
-                                str:LNG.WLCW
+                            X.boltagain(function(){
+                                me.GameState('GameStart');
                             });
                         }
                     },
@@ -694,6 +694,7 @@ var GameMoveScene = cc.Scene.extend({
                                     me.setRouletteEnabled(true);
                                     me.getAINode().runGame();
 
+
                                 }
                                 if (barindex == 2) {//等待开奖中
                                     X.tip_NB.show({
@@ -809,23 +810,13 @@ var GameMoveScene = cc.Scene.extend({
                         });
                     }
                     else if(returndata.code ==  GC.HTTPDATA.TOKEN){
-                        X.Promptbox.Getinstance({
-                            btnsType: 3,
-                            txt: LNG.WLYCTC,
-                            callback: function () {
-                                X.closeWebPage();
-                            },
-                            ispauseGame: true
+                        X.boltagain(function(){
+                            me.GameState('GameStart')
                         });
                     }
                     else{
-                        X.Promptbox.Getinstance({
-                            btnsType: 3,
-                            txt: LNG.WLYCTC,
-                            callback: function () {
-                                X.closeWebPage();
-                            },
-                            ispauseGame: true
+                        X.boltagain(function(){
+                            me.GameState('GameStart')
                         });
                     }
                 },
@@ -997,8 +988,7 @@ var GameMoveScene = cc.Scene.extend({
         }
     },
     getAINode : function(){
-       var me = this;
-       return X.AINodes.Getinstance(me);
+       return X.AINodes.Getinstance();
     },
     onExit:function() {
         var me = this;
@@ -1007,6 +997,8 @@ var GameMoveScene = cc.Scene.extend({
         }
         X.releaseAllTime();
         GC.HTTPDATA.boltagainindex = 1;
+
+        X.releaseAlls(X.tip_NB.Getinstance().objarr);
 
         X.releaseSceneNodes();
 
@@ -1056,5 +1048,7 @@ var GameMoveScene = cc.Scene.extend({
             delete this.FAILURE;
             this.FAILURE = null;
         }
+
+
     }
 });
