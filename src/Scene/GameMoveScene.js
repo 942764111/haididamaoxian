@@ -257,8 +257,8 @@ var GameMoveScene = cc.Scene.extend({
         //   GAME_MOVE_BTNS:['btn_add','btn_help','btn_fallback','btn_10','btn_50','btn_100'],
         switch(obj['name']){
             case 'btn_add':
-              //  me.addChild(new chongzhi(),GC.GAME_ZORDER.on);
-                X.Gotopup();
+                me.addChild(new chongzhi(),GC.GAME_ZORDER.on);
+              //  X.Gotopup();
                 break;
             case 'btn_caidan':
                 if(obj['onbtn']) {

@@ -26,6 +26,7 @@ var LNG={
     ZFQ:'需要支付 {1} 金币',
     WLYC:'网络异常请重试刷新',
     WLYCTC:'网络错误请退出重试刷新',
+    KF:'功能维护中客服V：laodivx',
     THCG:'兑换成功',
     YEBZ:'余额不足',
     THSC:'兑换失败',
